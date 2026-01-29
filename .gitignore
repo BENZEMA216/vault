@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Obsidian
+.obsidian/
+
+# Claude Code
+.claude/
+
+# Temporary files
+*.tmp
+*.bak
