@@ -18,7 +18,7 @@
 
 ### 整体布局
 
-![[StoryCode Studio - Canvas Mode.png]]
+![StoryCode Studio - Canvas Mode](./StoryCode%20Studio%20-%20Canvas%20Mode.png)
 
 **布局说明**：两栏 + 悬浮对话框
 
