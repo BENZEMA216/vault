@@ -162,6 +162,7 @@ Main Agent 主动将匹配的任务委派给专用 Agent，而非自己处理一
 Cost_agent ≈ α × N_tok + I_tool × Cost_tool + I_mem × Cost_mem + I_retry × Cost_retry
 ```
 
+
 Claude Code 的优化方式：
 - **减少 N_tok**：上下文压缩、输出精简（≤4 行）
 - **降低 Cost_tool**：使用 Haiku 处理简单任务
@@ -173,13 +174,13 @@ Claude Code 的优化方式：
 
 ### 五种机制
 
-| 机制 | 功能 | 实现 |
-|------|------|------|
-| **Agent 隔离** | Sub-Agent 上下文与 Main Agent 分离 | 减少冗余 |
-| **TodoWrite** | 实时任务状态追踪 | pending → in_progress → completed |
-| **Bash 输出压缩** | Haiku 压缩冗长日志 | 构建输出、测试结果 |
-| **Compact/Summarize** | 对话压缩 | Sonnet 处理，保留关键代码 |
-| **Session Memory** | 跨会话持久化 | 启动摘要 ≤50 字符 |
+| 机制                    | 功能                           | 实现                                |
+| --------------------- | ---------------------------- | --------------------------------- |
+| **Agent 隔离**          | Sub-Agent 上下文与 Main Agent 分离 | 减少冗余                              |
+| **TodoWrite**         | 实时任务状态追踪                     | pending → in_progress → completed |
+| **Bash 输出压缩**         | Haiku 压缩冗长日志                 | 构建输出、测试结果                         |
+| **Compact/Summarize** | 对话压缩                         | Sonnet 处理，保留关键代码                  |
+| **Session Memory**    | 跨会话持久化                       | 启动摘要 ≤50 字符                       |
 
 ### claude.md 上下文文件
 

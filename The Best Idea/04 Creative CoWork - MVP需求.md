@@ -42,16 +42,16 @@
 
 两栏布局 + 悬浮对话框。
 
-| # | 功能点 | 说明 | 状态 |
-|---|--------|------|------|
-| 1.1 | 两栏布局 | Explorer + 预览区/画布 | 待开发 |
-| 1.2 | Explorer 文件树 | 左侧文件/文件夹树形结构 | 待开发 |
-| 1.3 | 多 Tab 系统 | 预览区支持多 Tab | 待开发 |
-| 1.4 | Tab 切换/关闭 | 点击切换，x 关闭 | 待开发 |
-| 1.5 | 悬浮对话框 | AGENT 对话框悬浮在画布上方 | 待开发 |
-| 1.6 | 对话框拖拽 | 可拖拽移动位置 | 待开发 |
-| 1.7 | 对话框最小化/最大化 | 点击按钮切换大小 | 待开发 |
-| 1.8 | Explorer 折叠 | 可隐藏左侧文件树，画布全屏 | P1 |
+| #   | 功能点          | 说明                | 状态  |
+| --- | ------------ | ----------------- | --- |
+| 1.1 | 两栏布局         | Explorer + 预览区/画布 | 待开发 |
+| 1.2 | Explorer 文件树 | 左侧文件/文件夹树形结构      | 待开发 |
+| 1.3 | 多 Tab 系统     | 预览区支持多 Tab        | 待开发 |
+| 1.4 | Tab 切换/关闭    | 点击切换，x 关闭         | 待开发 |
+| 1.5 | 悬浮对话框        | AGENT 对话框悬浮在画布上方  | 待开发 |
+| 1.6 | 对话框拖拽        | 可拖拽移动位置           | 待开发 |
+| 1.7 | 对话框最小化/最大化   | 点击按钮切换大小          | 待开发 |
+| 1.8 | Explorer 折叠  | 可隐藏左侧文件树，画布全屏     | P1  |
 
 ---
 
@@ -168,14 +168,14 @@ AGENT 的后端逻辑，参考 [[Claude Code 架构分析]]。
 
 **关键约束**：最多只有一层 Sub-Agent（不能再嵌套），保持架构简单。
 
-| # | 功能点 | 说明 | 状态 |
-|---|--------|------|------|
-| 5.1.1 | Main Agent | 核心编排 Agent，处理用户输入，决定执行或委派 | 待开发 |
-| 5.1.2 | Explore Sub-Agent | 用 Haiku，只读工具，用于快速探索/搜索 | 待开发 |
-| 5.1.3 | Execute Sub-Agent | 用 Sonnet，全工具权限，用于复杂多步任务 | 待开发 |
-| 5.1.4 | Plan Sub-Agent | 用 Sonnet，只读工具，用于任务规划 | P1 |
-| 5.1.5 | Agent 委派机制 | Main Agent 根据任务类型委派给合适的 Sub-Agent | 待开发 |
-| 5.1.6 | Sub-Agent 上下文隔离 | Sub-Agent 有独立上下文，减少冗余 | 待开发 |
+| #     | 功能点               | 说明                                | 状态  |
+| ----- | ----------------- | --------------------------------- | --- |
+| 5.1.1 | Main Agent        | 核心编排 Agent，处理用户输入，决定执行或委派         | 待开发 |
+| 5.1.2 | Explore Sub-Agent | 用 Haiku，只读工具，用于快速探索/搜索            | 待开发 |
+| 5.1.3 | Execute Sub-Agent | 用 Sonnet，全工具权限，用于复杂多步任务           | 待开发 |
+| 5.1.4 | Plan Sub-Agent    | 用 Sonnet，只读工具，用于任务规划              | P1  |
+| 5.1.5 | Agent 委派机制        | Main Agent 根据任务类型委派给合适的 Sub-Agent | 待开发 |
+| 5.1.6 | Sub-Agent 上下文隔离   | Sub-Agent 有独立上下文，减少冗余             | 待开发 |
 
 #### 5.2 API 与通信
 
@@ -254,18 +254,92 @@ AGENT 的后端逻辑，参考 [[Claude Code 架构分析]]。
 
 ### 6. Skills 系统
 
-用户可自由加载的工具能力，参考 [[Claude Code 架构分析]] 的工具分层设计。
+用户可自由加载的工具能力。**遵循 [Anthropic Agent Skills](https://agentskills.io) 开放标准**，保证与 Claude Code、Cursor 等工具的兼容性。
+
+参考文档：[[0201 - 技术研究]]
 
 #### 6.1 Skill 管理
 
 | # | 功能点 | 说明 | 状态 |
 |---|--------|------|------|
 | 6.1.1 | .skills 文件夹读取 | 启动时加载项目的 Skills 配置 | 待开发 |
-| 6.1.2 | Skill 配置格式 | 定义 Skill 的 JSON/YAML schema | 待开发 |
+| 6.1.2 | Skill 配置格式 | **SKILL.md 格式**（见下方规范） | 待开发 |
 | 6.1.3 | 预置 Skills | 内置常用工具（见下表） | 待开发 |
 | 6.1.4 | 对话式添加 Skill | "帮我加一个 xxx"，AGENT 引导完成 | 待开发 |
 | 6.1.5 | API Key 配置 | 用户填自己的 key，安全存储 | 待开发 |
 | 6.1.6 | Skill 启用/禁用 | 开关某个 Skill | 待开发 |
+| 6.1.7 | Gating 检测 | 启动时检测依赖是否满足 | 待开发 |
+
+**SKILL.md 格式规范**（遵循 Anthropic Agent Skills 标准）：
+
+```
+skill-name/
+├── SKILL.md          # 必需：指令 + 元数据
+├── scripts/          # 可选：可执行代码
+├── references/       # 可选：参考文档
+└── assets/           # 可选：模板、资源
+```
+
+SKILL.md 示例：
+
+```yaml
+---
+name: generate-video
+description: 生成 AI 视频。支持 Sora、Minimax、Runway 等平台。当用户要求生成视频时使用。
+allowed-tools: VideoGeneration
+metadata:
+  cowork:
+    requires:
+      bins: ["ffmpeg"]           # 必须存在的二进制
+      env: ["OPENAI_API_KEY"]    # 必须设置的环境变量（可选）
+    category: 生成
+    icon: 🎬
+---
+
+# 视频生成
+
+## 使用场景
+- 用户要求生成视频
+- 用户提到 Sora、Minimax、Runway 等平台
+
+## 参数说明
+| 参数 | 说明 | 默认值 |
+|------|------|--------|
+| platform | sora/minimax/runway/auto | auto |
+| duration | 视频时长（秒） | 5 |
+| resolution | 720p/1080p | 1080p |
+| aspect_ratio | 16:9/9:16/1:1 | 16:9 |
+
+## 平台选择逻辑
+- **auto**: 根据时长和质量需求自动选择
+- **Sora**: 最高质量，支持音频，适合长视频（>8秒）
+- **Minimax**: 性价比高，生成快
+- **Runway**: 风格化强，适合创意内容
+```
+
+**Gating 系统**（借鉴 OpenClaw）：
+
+Skill 可以声明依赖条件，不满足则不加载或提示用户：
+
+| 字段 | 说明 | 示例 |
+|------|------|------|
+| `requires.bins` | 必须存在的二进制 | `["ffmpeg", "convert"]` |
+| `requires.anyBins` | 至少存在其一 | `["chrome", "chromium"]` |
+| `requires.env` | 必须设置的环境变量 | `["OPENAI_API_KEY"]` |
+| `requires.config` | 必须存在的配置 | `["api_keys.openai"]` |
+
+**Progressive Disclosure（渐进式加载）**：
+
+```
+Level 1: name + description (~100 tokens)
+  → 启动时加载，用于 AGENT 判断是否需要
+      ↓
+Level 2: SKILL.md 完整内容 (< 5000 tokens)
+  → 激活时加载
+      ↓
+Level 3: scripts/, references/
+  → 执行时按需加载
+```
 
 #### 6.2 工具分层与权限
 
@@ -314,15 +388,90 @@ AGENT 的后端逻辑，参考 [[Claude Code 架构分析]]。
 | bash | 执行 | 本地命令 | 执行 shell 命令 |
 | ffmpeg | 执行 | 本地命令 | 视频处理 |
 | generate_image | 生成 | API | 图片生成（接 Kling 等） |
-| generate_video | 生成 | API | 视频生成 |
+| **generate_video** | 生成 | API | 视频生成（见下方详细设计） |
 
 **Skill 接入方式**：
 
 | 方式 | 适用场景 | 例子 | 0215 支持 |
 |------|---------|------|----------|
-| **API 调用** | 有官方 API 的云端服务 | Runway、Kling、OpenAI | ✅ |
+| **API 调用** | 有官方 API 的云端服务 | Sora、Runway、Minimax | ✅ |
 | **本地命令** | CLI 工具 | FFmpeg、ImageMagick | ✅ |
 | **浏览器自动化** | 只有网页界面的工具 | 无 API 的生成工具 | ❌ P2 |
+
+#### 6.5 视频生成 Skill 详细设计
+
+**核心原则**：API 优先，浏览器为 fallback。
+
+**平台 API 现状**：
+
+| 平台 | 官方 API | 价格 | 特点 |
+|------|---------|------|------|
+| **Sora** | ✅ [OpenAI API](https://platform.openai.com/docs/guides/video-generation) | $0.40-1.00/视频 | 最高质量，支持音频 |
+| **Minimax/Hailuo** | ✅ [fal.ai](https://fal.ai/models/fal-ai/minimax/video-01/api) | $0.27-0.50/视频 | 性价比高，生成快 |
+| **Runway** | ✅ [官方 API](https://dev.runwayml.com/) | $0.25-0.50/视频 | 风格化强 |
+| **Kling** | ⚪ 国内 API | - | 需适配 |
+
+**Smart Router 逻辑**：
+
+```
+用户请求 → 解析参数 → 选择平台 → 调用生成 → 下载到 workspace
+```
+
+平台选择规则：
+- `platform=auto` 时：
+  - duration > 8s → Sora
+  - quality=high → Runway
+  - 默认 → Minimax（性价比）
+- 有指定 API Key 的平台优先
+- 无 API Key 时提示用户配置
+
+**调用流程**：
+
+```python
+# 统一接口
+async def generate_video(
+    prompt: str,
+    platform: str = "auto",      # sora/minimax/runway/auto
+    duration: int = 5,           # 秒
+    resolution: str = "1080p",   # 720p/1080p
+    aspect_ratio: str = "16:9",  # 16:9/9:16/1:1
+    image: str = None,           # 可选：首帧图片路径
+) -> dict:
+    """
+    Returns:
+        {
+            "url": "https://...",        # 远程 URL
+            "local_path": "outputs/...", # 本地路径
+            "platform": "sora",          # 实际使用的平台
+            "duration": 5,
+            "cost": 0.40                 # 预估成本
+        }
+    """
+```
+
+**用户 API Key 配置**：
+
+```yaml
+# ~/.cowork/config.yaml 或 项目/.cowork/config.yaml
+api_keys:
+  openai: "sk-..."      # 用于 Sora
+  runway: "rw-..."      # 用于 Runway
+  fal: "fal-..."        # 用于 Minimax 等
+
+video_generation:
+  default_platform: auto
+  default_duration: 5
+  default_resolution: 1080p
+```
+
+**实现优先级**：
+
+| 优先级 | 任务 | 工作量 |
+|--------|------|--------|
+| P0 | Sora/Minimax/Runway API 封装 | 1 周 |
+| P1 | 统一 Skill 接口 + Smart Router | 3 天 |
+| P2 | 用户 API Key 管理界面 | 3 天 |
+| P3 | 浏览器 Fallback（可选） | 2 周 |
 
 **对话式添加流程**：
 
@@ -473,6 +622,7 @@ AGENT 搜索 Kling 的接入方式（API 文档、SDK 等）
 
 ## 更新记录
 
+- 2025-02-01：补充 Skills 系统详细设计（SKILL.md 格式规范、Gating 系统、视频生成 Skill），参考 [[0201 - 技术研究]]
 - 2025-01-29：GENUI 核心功能（HTML 渲染 + AGENT 通信）加入 P0
 - 2025-01-29：补充后端需求，参考 Claude Code 架构加入分层 Agent、模块化 Prompt、工具权限、上下文管理、任务状态等
 - 2025-01-29：重构文档，按设计稿拆解详细功能点
