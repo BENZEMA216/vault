@@ -17,7 +17,7 @@ V4 布局采用了 VS Code 风格的 file tree 侧边栏（180px 宽）。这个
 3. **上下文丢失** — 文件树只能告诉你"有什么文件"，无法呈现"项目进展"或"素材关联"
 4. **空间浪费** — 180px 的常驻侧边栏在大多数操作中不需要，但一直占位
 
-![V4 主布局](screenshots/v4-main-layout.png)
+![V4 主布局](./screenshots/v4-main-layout.png?raw=true)
 
 ### 核心诉求
 
@@ -66,7 +66,7 @@ Rail (48px) + Main Content (1012px) + Agent Panel (380px) = 1440px
 - **左侧**：增强型文件树（280px）
 - **右侧**：选中文件的预览面板（~700px）
 
-![文件 Tab — 全宽文件浏览器](screenshots/tab-file-browser.png)
+![文件 Tab — 全宽文件浏览器](./screenshots/tab-file-browser.png?raw=true)
 
 文件树增强点：
 - 图片文件旁显示 **内联缩略图**（40×26px）
@@ -87,11 +87,11 @@ Rail (48px) + Main Content (1012px) + Agent Panel (380px) = 1440px
 - 顶部面包屑 + GENUI 标识
 - 分镜使用非对称 Bento 布局（大卡+小卡交替）
 
-![工作区 Tab — 全宽内容编辑](screenshots/tab-workspace.png)
+![工作区 Tab — 全宽内容编辑](./screenshots/tab-workspace.png?raw=true)
 
 ### File Tree 增强对比
 
-![Before vs After 文件树对比](screenshots/filetree-before-after.png)
+![Before vs After 文件树对比](./screenshots/filetree-before-after.png?raw=true)
 
 | 维度 | Before | After |
 |------|--------|-------|
@@ -103,7 +103,7 @@ Rail (48px) + Main Content (1012px) + Agent Panel (380px) = 1440px
 
 ### 增强型文件树完整布局
 
-![增强型 File Tree 集成布局](screenshots/enhanced-filetree.png)
+![增强型 File Tree 集成布局](./screenshots/enhanced-filetree.png?raw=true)
 
 ---
 
@@ -144,22 +144,22 @@ Rail (48px) + Main Content (1012px) + Agent Panel (380px) = 1440px
 6 个用户故事状态展示了完整的广告短片创作流程：
 
 ### S1 — 新项目·分析 Brief
-![S1 分析 Brief](screenshots/s1-brief-analysis.png)
+![S1 分析 Brief](./screenshots/s1-brief-analysis.png?raw=true)
 
 ### S2 — 脚本创作
-![S2 脚本创作](screenshots/s2-script-creation.png)
+![S2 脚本创作](./screenshots/s2-script-creation.png?raw=true)
 
 ### S3 — 分镜设计
-![S3 分镜设计](screenshots/s3-storyboard-design.png)
+![S3 分镜设计](./screenshots/s3-storyboard-design.png?raw=true)
 
 ### S4 — 视觉生成
-![S4 视觉生成](screenshots/s4-visual-generation.png)
+![S4 视觉生成](./screenshots/s4-visual-generation.png?raw=true)
 
 ### S5 — 音频制作
-![S5 音频制作](screenshots/s5-audio-production.png)
+![S5 音频制作](./screenshots/s5-audio-production.png?raw=true)
 
 ### S6 — 合成交付
-![S6 合成交付](screenshots/s6-composition-delivery.png)
+![S6 合成交付](./screenshots/s6-composition-delivery.png?raw=true)
 
 ---
 
