@@ -9,21 +9,21 @@
 ## 最近的关键决策
 
 - **2026-03-05**: 搭建 Claude Code session 初始化系统
-  - init.sh: 启动前并行拉 GitHub 热记忆，写入 MEMORY.md（auto-loaded）
-  - session-wrap.sh: Stop hook，结束时提醒更新 active_context.md
-  - init_repos.conf: tracked repos 可配置
-  - 飞书文档已写好可 share: https://www.feishu.cn/docx/O7NqdCDryoCwJ7xxHxMcM5RAnde
+  - init.sh / session-wrap.sh / init_repos.conf
   - 核心理念: GitHub 当外脑，init.sh 读，Stop hook 写，MEMORY.md 是中转站
 
-- **2026-03-11**: OpenClaw Debugger Console 搭建完成
+- **2026-03-11**: OpenClaw Debugger Console 完成部署
   - 文件: /root/.openclaw/debugger/main.py + index.html
-  - systemd 服务: openclaw-debugger，port 8899，已运行
-  - token auth 已加入: x_w-NfYtLw57mkbsipyifd9WIoGUR8vP（URL param 或 cookie）
-  - 进程已绑定 0.0.0.0:8899，iptables 已放行
-  - **阻塞**: 腾讯云安全组未开放 8899 → 需在控制台手动添加入站规则 TCP:8899
-  - 临时访问: SSH tunnel `ssh -L 8899:localhost:8899 root@43.160.242.46 -N`，然后 http://localhost:8899
+  - systemd 服务: openclaw-debugger，port 8899
+  - token: x_w-NfYtLw57mkbsipyifd9WIoGUR8vP
+  - nginx 已配 /debugger/ 反代（port 80 也被安全组封了，实际走 cloudflare tunnel）
+  - cloudflared 已安装: /usr/local/bin/cloudflared
+  - 启动命令: `nohup cloudflared tunnel --url http://localhost:8899 --no-autoupdate > /tmp/cloudflared.log 2>&1 &`
+  - URL 从 /tmp/cloudflared.log 读取（每次重启随机，需升级 named tunnel 才能固定）
+  - **下一步**: 注册 Cloudflare 账号 → 创建 named tunnel → 固定域名 → 做成 systemd 服务
 
 ## 阻塞项
 
-- 腾讯云控制台开放安全组 TCP:8899（才能公网直接访问 Debugger）
+- 腾讯云安全组把所有入站端口都封了（含 80/8899），只能走出站 cloudflare tunnel
+- trycloudflare.com URL 重启后变化，需 named tunnel 固定
 
