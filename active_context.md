@@ -4,29 +4,32 @@
 
 ## 当前优先级
 
-- OpenClaw Debugger v5 可用，brutalist UI + 颜色区分 + session graph 已完成
+OpenClaw Debugger UI 走查迭代中（ralph loop）
 
 ## 最近的关键决策
 
-- **2026-03-11**: Brutalist UI 重设计完成
-  - CSS: --bg: #f0f0eb, --ink: #000, 1px 黑边，uppercase，monospace
-  - Body: 黑色背景+6px margin = 外框效果；.app-shell: 浅灰内容区
-  - 登录页同步改为 brutalist 风格
+### OpenClaw Debugger 设计系统 (2026-03-11)
 
-- **2026-03-11**: Debugger v5 功能增强（本次 session）
-  - 颜色区分: user=蓝(#211dff)左边框, toolResult错误=红色, tool类型上色(exec=橙/image=蓝/search=绿)
-  - dm badge=蓝, probe badge=橙
-  - 折叠: SESSION CONTEXT面板可折叠, 长消息(>500字)自动截断+展开
-  - Session Graph: Graph tab现在显示当前session的记忆拓扑(中心=session, 周围=sys/mem/tool/asset节点), 切换session自动刷新
-  - 后端: trace endpoint新增freq字段(memory文件读取次数) + tool_calls汇总
-  - 文件: /root/.openclaw/debugger/main.py + index.html
+完成了对 `/root/.openclaw/debugger/` 的全面重构：
 
-## 固定信息
+**已完成：**
+- 完整 CSS 设计系统：3层 surface (--bg/--bg-2/--bg-3)，3层 ink，2层 border，type scale
+- Login page 统一设计系统
+- Graph SESSION_NODE 颜色匹配 CSS 变量
+- tool_use 块添加 category 颜色（orange/blue/green/dim）
+- tool-cat-file CSS 类补全
+- loadMoreMsgs bug 修复（DOM 替代 regex）
+- sessions 侧边栏：搜索框 + ↻ 刷新按钮 + 缓存绕过
+- 键盘导航（↑/↓ 切换 session）
+- 消息 hover copy 按钮
+- 内存侧面板动画修复（box-shadow 替代 border-width）
+- Nav-right 显示 session 总数
 
-- token: x_w-NfYtLw57mkbsipyifd9WIoGUR8vP
-- 启动tunnel: pkill cloudflared; nohup cloudflared tunnel --url http://localhost:8899 > /tmp/cf_tunnel.log 2>&1 & sleep 8; grep -o 'https://[a-z0-9-]*\.trycloudflare\.com' /tmp/cf_tunnel.log
-- thumbcache: /root/.openclaw/debugger/.thumbcache/
+**文件路径：**
+- 本地：/tmp/debugger_index.html, /tmp/debugger_main.py
+- 服务器：/root/.openclaw/debugger/
+- 访问：http://43.160.242.46/debugger/ (token: x_w-NfYtLw57mkbsipyifd9WIoGUR8vP)
 
 ## 阻塞项
 
-- Tunnel URL 每次重启随机变化，需 named tunnel 固定
+Ralph loop 仍在运行，iteration 2 继续中
