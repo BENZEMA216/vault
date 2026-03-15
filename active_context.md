@@ -2,26 +2,21 @@
 
 ## 当前优先级
 
-OpenClaw Debugger 设计+功能走查迭代完成 3 轮
+**Agent Cloud 项目启动** — 先验证需求，不写代码
 
-## 最近关键进展 (2026-03-11)
+## 最近的关键决策 (2026-03-16)
 
-### 已完成的修复 (3次迭代共25+项)
+- Agent Cloud: 定位为 "Agent Reverse API Gateway"，让本地 Agent 一键变公网 API 服务
+- 起因: 用户自己想把炒股 agent 对外服务，发现流程很不友好
+- 决策: 先用炒股 agent 手动跑通一次对外服务全流程（FastAPI + ngrok + 手动发 API key），记录摩擦点，再决定 MVP 做什么
+- TRD v0.1 已写好，但需求尚未验证
 
-**Iteration 1:**
-- loadMoreMsgs DOM修复、tool-cat-file CSS补全、sessions搜索+刷新按钮
-- 键盘↑↓导航、消息copy按钮、内存panel动画修复、nav-right显示session数
+## 下一步行动
 
-**Iteration 2:**
-- copy-btn XSS修复(改用_copyMap)、loadMoreMsgs滚动位置保持
-- renderMd支持列表/段落/HR、graph container flex修复
-- cacheWrite显示、tool_result显示tool_use_id+preview
+1. 用炒股 agent 真实服务一个外部用户（最土方式跑通）
+2. 记录所有摩擦点和痛点排序
+3. 找 10 个 agent creator 做用户访谈验证
 
-**Iteration 3:**
-- selectMemChip改data属性(单引号安全)、内存频率显示×N
-- _copyMap清理防内存泄漏、trace panel增加TOOL CALLS区块
-- nav-right显示当前session名+消息数、copy按钮id修复
+## 阻塞项
 
-**文件：** /tmp/debugger_index.html, /tmp/debugger_main.py
-**服务器：** root@43.160.242.46:/root/.openclaw/debugger/
-**访问：** http://43.160.242.46/debugger/ token: x_w-NfYtLw57mkbsipyifd9WIoGUR8vP
+无
