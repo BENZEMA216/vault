@@ -2,35 +2,34 @@
 
 ## 当前优先级
 
-**AI Chronicle（AI 创业编年史）— 数据源调研完成，待建 repo**
+**AI Chronicle（AI 创业编年史）— Repo 已建，待启动数据采集**
 
 ## 最近的关键决策 (2026-03-17)
 
-### AI Chronicle 数据源调研完成
-- 完成 40 个数据源的全面调研（8 大类：付费数据库、免费开放、中国特有、政府学术、新闻媒体、AI 榜单、开源数据集、另类数据）
-- **预算内最优组合确定**（~$500-800）：
-  - 免费骨架：YC Directory + GitHub Awesome Lists + a16z Top 100 + AICPB + CB Insights AI 100 + Stanford AI Index
-  - 付费核心：Crunchbase Pro ($49/月) + IT桔子 VIP (~2000 RMB/年)
-  - 免费补充 milestones：36氪 PitchHub + 量子位 + TechCrunch + NewsAPI + SEC EDGAR + ProductHunt API
-  - 按需：天眼查/企查查 API（工商验证）
-- **差异化方向确认**：
-  1. 中美数据打通（Crunchbase 不覆盖中国，IT桔子不覆盖美国）
-  2. Milestones 时间线（现有平台只有融资数据，缺事件追踪）
-  3. 产品维度（公司级 → 产品级追踪）
-  4. 编年史叙事角度（vs 数据库查询体验）
-- Schema 已确认：公司名、成立时间、融资轮次(每轮)、投资人(每轮)、产品主页、创始团队及变化、milestones
+### AI Chronicle Repo 已创建
+- **GitHub**: https://github.com/BENZEMA216/ai-chronicle (private)
+- **本地路径**: ~/ai-chronicle/
+- **已完成**:
+  - README.md — 项目定位、差异化、阶段规划
+  - docs/schema.md — 完整数据 Schema（Company/Founders/Funding/Products/Milestones + 赛道分类体系）
+  - docs/data-sources.md — 40 个数据源调研（8 大类 + 3 层优先级 + 启动路径）
+- **差异化方向**:
+  1. 中美数据打通
+  2. Milestones 时间线（不只融资数据）
+  3. 产品维度追踪
+  4. 编年史叙事角度
+- **预算内最优组合**: Crunchbase Pro ($49/月) + IT桔子 VIP (~2000 RMB) + 大量免费源
 
-### Agent Cloud 项目（之前 session）
+### Agent Cloud 项目
 - Web UI first，Plan 待重写
 
 ## 下一步行动
 
-1. **AI Chronicle: 建 GitHub repo + 定义正式 schema + 搭采集框架**
-2. 先用免费数据源搭骨架（YC、GitHub lists、a16z Top 100）
-3. 接 Crunchbase Pro + IT桔子 VIP 补融资数据
-4. 竞品深度对比（Crunchbase/CB Insights 实际 AI 数据覆盖程度）
+1. AI Chronicle: 用免费数据源搭骨架（YC Directory + GitHub Lists + a16z Top 100）
+2. AI Chronicle: 接 Crunchbase Pro + IT桔子 VIP 补融资数据
+3. AI Chronicle: 写采集脚本框架
 
 ## 阻塞项
 
-- 等用户确认开始建 repo
+- 无
 
