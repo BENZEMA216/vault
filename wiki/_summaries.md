@@ -220,6 +220,21 @@
 
 ## articles/
 
+### `raw/articles/agent-communication/protocols-and-standards.md`
+> Agent 通信协议深度研究报告：覆盖 MCP（97M 月下载事实标准）、A2A（Agent Card + Task lifecycle）、ANP（W3C DID 去中心化）、AGNTCY（6 层架构）、UCP（Agentic Commerce）等 15+ 协议/框架，包含 FIPA ACL 历史追溯、协议对比矩阵、2026 格局分析、对 Agent Economy 的启示
+- 关键概念：[[concepts/agent-communication]], [[concepts/tool-routing]], [[concepts/sub-agent-architecture]]
+- 约 28000 字
+
+### `raw/articles/agent-communication/academic-research.md`
+> Agent 通信学术研究深度报告：梳理 2023-2026 年 25+ 篇论文，归纳 7 种核心通信模式（Debate、Role-Playing、Hierarchical Delegation、Blackboard、Market-Based、Emergent、Latent Space），覆盖 Benchmark 评估体系（MARBLE/COMMA）和 Production 框架对比
+- 关键概念：[[concepts/agent-communication]], [[concepts/agent-loop]], [[concepts/sub-agent-architecture]]
+- 约 24000 字
+
+### `raw/articles/agent-communication/product-landscape.md`
+> Agent 通信商业产品全景报告：覆盖 40+ 产品/平台，包含 Enterprise 四巨头（Salesforce $8亿 ARR、IBM、Microsoft、Amazon）、中国生态（Coze、Dify、蚂蚁等 10+ 平台）、去中心化网络（ASI Alliance、Naptha）、8 种商业模式分类、市场规模数据（$70.6B → $932B）
+- 关键概念：[[concepts/agent-communication]], [[concepts/tool-routing]]
+- 约 18000 字
+
 ### `raw/articles/claude-code-research/Agent System Prompt 研究.md`
 > 4 大主流 Agent System Prompt 横向对比：Manus、Claude Code、Cursor、Devin 的设计哲学差异
 - 关键概念：[[concepts/modular-prompt-architecture]], [[concepts/agent-loop]], [[concepts/skills-system]]

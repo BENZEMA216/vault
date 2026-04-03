@@ -28,6 +28,7 @@
 - [[concepts/safe-autonomy]] — Safe Autonomy: 减少审批摩擦同时保持行为可控
 - [[concepts/agent-runtime]] — Agent Runtime: 状态管理、持久化、重试的基础设施层
 - [[concepts/spec-driven-development]] — Spec-Driven Development: 规格驱动的 Agent 开发模式
+- [[concepts/agent-communication]] — Agent Communication（Agent 通信）：Agent 间交换信息、协调行为的机制和协议，MCP+A2A 双协议栈 + 7 种通信模式
 
 ---
 
@@ -37,6 +38,7 @@
 - [[maps/agent-infrastructure]] — Agent 基础设施研究：Agent 循环、记忆、上下文、工具、Prompt 等底层技术全景
 - [[maps/user-research-insights]] — 用户研究洞察：4 组漫剧团队访谈 + 产品分析汇总的用户需求图谱
 - [[maps/harness-engineering]] — Harness Engineering 全景：六大支柱 + Benchmarks
+- [[maps/agent-communication]] — Agent Communication 全景：协议栈（MCP→A2A→ANP→AGNTCY→UCP）、学术脉络、产品三层格局、论文索引
 
 ---
 
@@ -46,6 +48,7 @@
 - [[connections/claude-code-to-creative]] — Claude Code → Creative CoWork 架构迁移：从编码 Agent 到创作 Agent 的改造路径
 - [[connections/memory-to-context]] — 记忆系统 → 上下文工程关联：持久化记忆如何服务于上下文窗口管理
 - [[connections/harness-to-creative]] — Harness Engineering → Creative CoWork 架构映射
+- [[connections/communication-to-economy]] — Agent Communication → Agent Economy 关联：协议/学术模式到经济基础设施的映射
 
 ---
 
@@ -222,6 +225,11 @@
 #### harness-engineering/
 - `raw/articles/harness-engineering/awesome-harness-engineering.md` — Harness Engineering 资源大全（walkinglabs/awesome-harness-engineering）
 - `raw/articles/harness-engineering/harness-engineering-deep-research.md` — Harness Engineering 深度研究报告（10 篇核心文章的系统性分析）
+
+#### agent-communication/
+- `raw/articles/agent-communication/protocols-and-standards.md` — Agent 通信协议深度研究：MCP/A2A/ANP/AGNTCY/UCP 等 15+ 协议分析、FIPA ACL 历史、协议对比矩阵
+- `raw/articles/agent-communication/academic-research.md` — Agent 通信学术研究：7 种通信模式、25+ 篇论文分析、Benchmark 评估体系
+- `raw/articles/agent-communication/product-landscape.md` — Agent 通信商业产品全景：40+ 产品/平台格局、市场数据、商业模式分类、中国生态
 
 #### 其他
 - `raw/articles/设计原则.md` — StoryCode Studio CSS 设计 token（暗色主题 + 青色强调）
