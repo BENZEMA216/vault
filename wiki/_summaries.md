@@ -679,3 +679,13 @@
 > StoryCode Studio CSS 设计 token：暗色主题 + 青色强调色完整设计规范
 - 关键概念：[[concepts/genui]]
 - 约 3600 字
+
+### `raw/articles/harness-engineering/awesome-harness-engineering.md`
+> Harness Engineering 资源大全：Foundations、Context、Constraints、Evals、Benchmarks、Runtimes 六大板块，收录 80+ 资源
+- 关键概念：[[concepts/harness-engineering]], [[concepts/context-engineering]], [[concepts/self-verification]], [[concepts/safe-autonomy]], [[concepts/agent-runtime]]
+- 约 3000 字
+
+### `raw/articles/harness-engineering/harness-engineering-deep-research.md`
+> 10 篇核心文章的系统性深度研究：Anthropic/LangChain/Thoughtworks/HumanLayer/Inngest 对 Harness Engineering 的定义、Context 策略、安全自治、评估体系、运行时架构、实用模式
+- 关键概念：[[concepts/harness-engineering]], [[concepts/self-verification]], [[concepts/safe-autonomy]], [[concepts/agent-runtime]], [[concepts/spec-driven-development]], [[concepts/context-engineering]], [[concepts/progressive-disclosure]], [[concepts/sub-agent-architecture]]
+- 约 8000 字

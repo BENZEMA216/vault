@@ -26,6 +26,7 @@
 | [[raw/0205-init-mechanism]] | sec 12 工具路由，工具的分层加载策略 |
 | [[raw/tool-search-notes]] | Claude API 延迟加载机制分析，Tool Search 的实现细节 |
 | [[raw/video-agent-main-sp-v2]] | 视频生成平台路由表，根据需求选择最佳平台 |
+| [[raw/articles/harness-engineering/harness-engineering-deep-research]] | ACI 设计原则、CLI tools > MCP、"the dumb zone" 问题 |
 
 ## 关联概念
 

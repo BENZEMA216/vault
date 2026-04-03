@@ -23,6 +23,11 @@
 - [[concepts/tool-routing]] — 工具路由：Agent 根据意图动态选择和调用工具的机制，含 Tool Search 延迟加载
 - [[concepts/sub-agent-architecture]] — 子 Agent 架构：主 Agent 委托专业子 Agent 执行特定任务的分层设计
 - [[concepts/init-mechanism]] — /init 机制：Skill Focus Profile + 三层推荐 + 干扰规避的会话初始化设计
+- [[concepts/harness-engineering]] — Harness Engineering: Agent 运行环境的可靠性工程
+- [[concepts/self-verification]] — Self-Verification: Agent 自验证机制（single highest-leverage intervention）
+- [[concepts/safe-autonomy]] — Safe Autonomy: 减少审批摩擦同时保持行为可控
+- [[concepts/agent-runtime]] — Agent Runtime: 状态管理、持久化、重试的基础设施层
+- [[concepts/spec-driven-development]] — Spec-Driven Development: 规格驱动的 Agent 开发模式
 
 ---
 
@@ -31,6 +36,7 @@
 - [[maps/creative-cowork-product]] — Creative CoWork 产品全景：从愿景到 MVP 的完整产品脉络，"创作者的 Claude Code"
 - [[maps/agent-infrastructure]] — Agent 基础设施研究：Agent 循环、记忆、上下文、工具、Prompt 等底层技术全景
 - [[maps/user-research-insights]] — 用户研究洞察：4 组漫剧团队访谈 + 产品分析汇总的用户需求图谱
+- [[maps/harness-engineering]] — Harness Engineering 全景：六大支柱 + Benchmarks
 
 ---
 
@@ -39,6 +45,7 @@
 - [[connections/user-pain-to-product]] — 用户痛点 → 产品特性映射：访谈痛点如何转化为 Creative CoWork 功能设计
 - [[connections/claude-code-to-creative]] — Claude Code → Creative CoWork 架构迁移：从编码 Agent 到创作 Agent 的改造路径
 - [[connections/memory-to-context]] — 记忆系统 → 上下文工程关联：持久化记忆如何服务于上下文窗口管理
+- [[connections/harness-to-creative]] — Harness Engineering → Creative CoWork 架构映射
 
 ---
 
@@ -211,6 +218,10 @@
 
 #### blog/
 - `raw/articles/blog/AI Agent 产品设计 Blog 阅读清单.md` — AI Agent 产品设计博客阅读清单
+
+#### harness-engineering/
+- `raw/articles/harness-engineering/awesome-harness-engineering.md` — Harness Engineering 资源大全（walkinglabs/awesome-harness-engineering）
+- `raw/articles/harness-engineering/harness-engineering-deep-research.md` — Harness Engineering 深度研究报告（10 篇核心文章的系统性分析）
 
 #### 其他
 - `raw/articles/设计原则.md` — StoryCode Studio CSS 设计 token（暗色主题 + 青色强调）

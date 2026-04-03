@@ -25,12 +25,14 @@ Claude Code 的三层架构是最清晰的参考实现。Main Agent 负责理解
 | [[raw/claude-code-architecture]] | Claude Code 架构分析：Main/Explore/Plan 三层子 Agent 设计 |
 | [[raw/agent-system-prompt-research]] | 4 种 Agent 对比：Manus 29 工具单 Agent vs Claude Code 委托模式 |
 | [[raw/04-mvp-requirements]] | sec 5.1 分层 Agent 设计，Creative CoWork 采用委托模式的决策 |
+| [[raw/articles/harness-engineering/harness-engineering-deep-research]] | Sub-agent 作为 "context firewall"，隔离任务防止 noise 积累 |
 
 ## 关联概念
 
 - [[concepts/agent-loop]] — 子 Agent 各自运行独立的 Agent Loop，由主 Agent 的 Loop 触发
 - [[concepts/tool-routing]] — 子 Agent 架构与工具路由配合，不同子 Agent 持有不同工具集
 - [[concepts/modular-prompt-architecture]] — 每个子 Agent 加载不同的模块组合
+- [[concepts/harness-engineering]] — Sub-agent 是 harness 管理 context 的核心工具
 
 ---
 *由 LLM 从 raw/ 数据编译，请勿手动编辑*

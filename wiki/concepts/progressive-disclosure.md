@@ -29,6 +29,7 @@
 | [[raw/Skills架构启发]] | Skills 的按需加载机制体现渐进式披露原则 |
 | [[raw/SWE-Pruner]] | 动态裁剪研究，证明上下文精简可提升效果并节省 token |
 | [[raw/Tool-Search-Tool]] | 工具定义的延迟加载（deferred loading）实现案例 |
+| [[raw/articles/harness-engineering/harness-engineering-deep-research]] | "Silence on success; errors only on failure" 原则、工具按需加载 |
 
 ## 关联概念
 
