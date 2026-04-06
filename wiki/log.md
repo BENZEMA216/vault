@@ -70,3 +70,9 @@
 - 当前 benchmark 各测不同东西，都叫 "World Model"
 - 缺失方向：1+2 交叉（因理解物理而能 zero-shot 适应新环境的 Agent）
 - 产出归档至 raw/articles/world-model/world-model-definition-problem.md
+
+## [2026-04-06] query | 车昊轩 World Model 创业构想分析
+- 三层架构: World Model (基模) + Agent Harness + World Engine
+- 对标: 目前无人做全栈，Minecraft 生态最接近
+- Dongzhe 交叉点: Agent Harness + Communication + Economy 填 Layer 2
+- 产出归档至 raw/articles/world-model/che-haoxuan-startup-analysis.md
