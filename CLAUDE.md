@@ -1,90 +1,147 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code when working in this Obsidian vault.
+> Schema for this LLM Wiki. Defines structure, conventions, and workflows.
+> Pattern: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 
 ## Vault 概述
 
-这是 Dongzhe 的个人知识库（Obsidian），采用 **AK 知识库模式**：raw 数据 → LLM 编译 → wiki → CLI 操作 → Obsidian 浏览。
+Dongzhe 的个人知识库（Obsidian），采用 **LLM Wiki** 模式。
+
+Obsidian 是 IDE，LLM 是 programmer，wiki 是 codebase。
 
 GitHub remote: https://github.com/BENZEMA216/vault
+
+## 三层架构
+
+```
+raw/     原始素材（immutable，LLM 只读不改）
+wiki/    LLM 编译产物（LLM 拥有，人只读）
+output/  查询产出（可回流 wiki/）
+```
 
 ## 目录结构
 
 ```
 vault/
-├── active_context.md          # 热记忆：当前工作状态和优先级
+├── raw/                           # Layer 1: Raw Sources
+│   ├── papers/                    # 论文 PDF + 笔记（按方向分类）
+│   ├── projects/                  # 项目文档（creative-cowork, jimeng-video-agent, etc.）
+│   └── articles/                  # 研究文章、学习笔记、深度研究
+│       ├── claude-code-research/
+│       ├── harness-engineering/
+│       ├── agent-communication/
+│       ├── world-model/
+│       ├── learning-notes/
+│       └── ...
 │
-├── raw/                       # 原始素材（只增不改，LLM 的数据源）
-│   ├── papers/                # 论文 PDF + 笔记（按方向分类）
-│   │   ├── reasoning/
-│   │   ├── context-engineering/
-│   │   ├── visual-generation/
-│   │   ├── agent-infrastructure/
-│   │   ├── agent-memory/
-│   │   └── generative-models/
-│   ├── projects/              # 项目文档
-│   │   ├── creative-cowork/   # Creative CoWork 产品（01→06 迭代文档 + 设计稿）
-│   │   ├── jimeng-video-agent/ # 即梦视频 Agent SP 和 Skill
-│   │   ├── xian-home/         # 弦的形象设计
-│   │   └── user-interview/    # 漫剧用户访谈（原文禁止修改）
-│   └── articles/              # 研究文章和学习笔记
-│       ├── claude-code-research/ # Claude Code 深度拆解
-│       ├── learning-notes/    # 飞书/外部同步的学习笔记
-│       ├── memory-research/   # Agent 记忆方案研究
-│       └── blog/              # 阅读清单
+├── wiki/                          # Layer 2: The Wiki
+│   ├── _index.md                  # 按领域分类的内容索引（LLM 查询入口）
+│   ├── _summaries.md              # 所有 raw/ 文件的一行摘要
+│   ├── log.md                     # Append-only 时间线（可 grep 解析）
+│   ├── concepts/                  # 概念文章（23 篇）
+│   ├── maps/                      # 主题地图（6 篇）
+│   └── connections/               # 跨主题关联发现（6 篇）
 │
-├── wiki/                      # LLM 编译产物（人不直接编辑，LLM 维护）
-│   ├── _index.md              # 全局索引
-│   ├── _summaries.md          # 所有 raw/ 文档的摘要
-│   ├── concepts/              # 概念文章（16 篇）
-│   ├── maps/                  # 主题地图（3 篇）
-│   └── connections/           # 跨主题关联发现（3 篇）
-│
-├── output/                    # 查询产出（可回流 wiki）
+├── output/                        # Query 产出
 │   ├── reports/
-│   └── slides/
+│   └── slides/                    # Marp 格式
 │
-├── .prompt/                   # Prompt 管理（Agent 的模块化 Prompt）
-└── CLAUDE.md                  # 本文件
+├── .claude/commands/              # Slash commands（/kb-ingest, /kb-query, etc.）
+├── active_context.md              # 热记忆：当前优先级
+└── CLAUDE.md                      # Layer 3: This Schema
 ```
 
-## AK 知识库模式
+## 操作流程
 
-### 核心原则
+### Ingest（收录新素材）
 
-1. **raw/ 只增不改** — 原始素材是 ground truth，LLM 只读
-2. **wiki/ 由 LLM 维护** — 人不直接编辑 wiki，所有内容由 LLM 从 raw/ 编译
-3. **output/ 回流增强** — 查询产出可归档回 wiki，知识持续积累
-4. **索引自维护** — LLM 自动维护 `_index.md` 和 `_summaries.md`
+1. 素材存入 `raw/` 对应子目录（不修改原始内容）
+2. 讨论关键 takeaways
+3. 写 summary → 更新 `_summaries.md`
+4. 更新 `_index.md`（加入对应领域分类）
+5. 更新相关 `concepts/`、`maps/`、`connections/`（一个源可能触及 10-15 个 wiki 页面）
+6. Append 到 `log.md`：`## [YYYY-MM-DD] ingest | 标题`
 
-### 操作流程
+### Query（查询研究）
 
+1. 读 `_index.md` 定位相关页面
+2. 读取相关 concepts/maps，按需回溯 raw/
+3. 合成答案（markdown / 对比表 / Marp 幻灯片 / matplotlib）
+4. **有价值的答案归档回 wiki/**（Query 结果不应消失在聊天记录里）
+5. Append 到 `log.md`：`## [YYYY-MM-DD] query | 问题摘要`
+
+### Lint（健康检查）
+
+检查项：
+- 矛盾：不同页面间的矛盾陈述
+- 过时：被新来源取代的旧结论
+- 孤儿：没有 inbound links 的页面
+- 缺失：被频繁提及但没有独立页面的概念
+- 断链：`[[wiki-link]]` 指向不存在的文件
+- 数据缺口：可以通过 web search 补充的信息
+
+Append 到 `log.md`：`## [YYYY-MM-DD] lint | 发现 N 个问题`
+
+## 页面格式
+
+### Concept 文章
+
+```markdown
+# [概念名称]
+
+> 一句话定义
+
+## 核心要点
+## 详细说明
+## 在知识库中的出现
+| 来源 | 上下文 |
+## 关联概念
+
+---
+*由 LLM 从 raw/ 数据编译，请勿手动编辑*
 ```
-新素材 → raw/ → LLM 增量编译 → wiki/ 更新
-                                    ↓
-查询 → LLM 研究 wiki → output/ → 可选回流 wiki/
-                                    ↓
-Lint → LLM 健康检查 → 发现不一致/缺失 → wiki/ 修复
+
+### Map 文章
+
+```markdown
+# [主题] 全景
+
+> 一句话概述
+
+## 概览
+## 关键组件（链接 concepts）
+## 数据来源（链接 raw/）
+## 开放问题
 ```
 
-### 使用 Knowledge Base Skill
+### Log 条目（可 grep 解析）
 
-本 vault 配套 `knowledge-base` Skill，提供以下命令：
-- **ingest**: 将新素材收录到 raw/ 并增量编译到 wiki/
-- **query**: 对 wiki 进行复杂查询，产出 output/
-- **lint**: 对 wiki 进行健康检查（不一致、缺失、新关联）
-- **compile**: 全量重新编译 wiki/
+```markdown
+## [2026-04-06] ingest | Article Title
+- Source: URL or path
+- New/updated pages: ...
+- Wiki state: N concepts, N maps, N connections
+```
 
 ## 编辑规范
 
-- 文档使用中文，技术术语保持英文
-- 使用 Obsidian 风格的 Markdown（支持 `[[链接]]` 语法）
-- 论文 PDF 统一放 `raw/papers/` 对应子目录
-- User Interview 中的访谈原文**禁止修改**，只能新建总结文件
-- wiki/ 中的所有文件底部标注 `*由 LLM 从 raw/ 数据编译，请勿手动编辑*`
+- 中文为主，技术术语保持英文
+- Obsidian `[[wiki-link]]` 语法
+- raw/ 中的文件**只增不改**（immutable source of truth）
+- wiki/ 中所有文件底部标注 `*由 LLM 从 raw/ 数据编译，请勿手动编辑*`
+- User Interview 访谈原文**禁止修改**
+- 论文 PDF 放 `raw/papers/` 对应子目录
+- 论文索引需包含：标题、作者、年份、会议、引用数、arXiv URL、质量评级
 
 ## 访谈总结规范
 
 - 命名：`{原文件名} - 总结.md`
-- 头部包含元信息（原文链接、访谈对象、时长、日期）
 - 必须包含：公司概况、团队组织、制作流程、工具矩阵、核心痛点、质量标准、金句摘录
+
+## Obsidian Tips
+
+- **Graph View** 查看 wiki 结构和孤儿页面
+- **Web Clipper** 快速抓取网页文章到 raw/
+- **Marp** 插件渲染 output/slides/
+- **Dataview** 插件查询 YAML frontmatter
+- Wiki 是 git repo，有版本历史和协作
