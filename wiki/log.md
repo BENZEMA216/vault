@@ -54,3 +54,9 @@
 - 新增 3D/Spatial 分类
 - 创建 raw/papers/reasoning/LLM-Reasoning-Paper-Index.md（含 ToT + CoT）
 - 论文索引：39 → 49 篇
+
+## [2026-04-06] ingest | World Model 最新进展 2025Q4-2026Q1
+- Source: 多源 web research（34 articles/papers/blogs）
+- 核心发现：Sora 关闭 + AMI Labs $1.03B + LeWM 15M 参数 + Densing Law
+- 五个范式转变：Video Gen≠WM 定论、JEPA 实践化、WMaaS 机会、效率革命、自动驾驶 killer app
+- Wiki state: 23 concepts, 6 maps, 6 connections
