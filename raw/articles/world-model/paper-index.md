@@ -1,6 +1,6 @@
 # World Model 论文索引（含引用数与质量评级）
 
-> 更新时间: 2026-04-03
+> 更新时间: 2026-04-06
 > 引用数据来源: Semantic Scholar API + Google Scholar
 > 质量评级: S (1000+, 奠基论文) / A (300-999) / B (100-299) / C (<100, 多为 2025-2026 前沿新作)
 
@@ -8,13 +8,12 @@
 
 ## S-Tier（1000+ 引用，奠基论文）
 
-| # | 论文 | 作者 | 年份 | 会议 | 引用 | 链接 |
-|---|------|------|------|------|------|------|
-| 1 | Tree of Thoughts: Deliberate Problem Solving with LLMs | Yao et al. | 2023 | **NeurIPS 2023** | **3,634** | [arxiv.org/abs/2305.10601](https://arxiv.org/abs/2305.10601) |
-| 2 | MuZero: Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model | Schrittwieser et al. | 2020 | **Nature 2020** | **3,000+** | [arxiv.org/abs/1911.08265](https://arxiv.org/abs/1911.08265) |
-| 3 | A Path Towards Autonomous Machine Intelligence (JEPA Vision) | LeCun | 2022 | **OpenReview** | **3,000+** | [openreview.net](https://openreview.net/pdf?id=BZ5a1r-kVsf) |
-| 4 | Dream to Control: Learning Behaviors by Latent Imagination (DreamerV1) | Hafner et al. | 2020 | **ICLR 2020** | **1,787** | [arxiv.org/abs/1912.01603](https://arxiv.org/abs/1912.01603) |
-| 5 | World Models | Ha & Schmidhuber | 2018 | **NeurIPS 2018** | **1,559** | [arxiv.org/abs/1803.10122](https://arxiv.org/abs/1803.10122) |
+| #   | 论文                                                                            | 作者                   | 年份   | 会议               | 引用         | 链接                                                           |
+| --- | ----------------------------------------------------------------------------- | -------------------- | ---- | ---------------- | ---------- | ------------------------------------------------------------ |
+| 1   | MuZero: Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model | Schrittwieser et al. | 2020 | **Nature 2020**  | **3,000+** | [arxiv.org/abs/1911.08265](https://arxiv.org/abs/1911.08265) |
+| 2   | A Path Towards Autonomous Machine Intelligence (JEPA Vision)                  | LeCun                | 2022 | **OpenReview**   | **3,000+** | [openreview.net](https://openreview.net/pdf?id=BZ5a1r-kVsf)  |
+| 3   | Dream to Control: Learning Behaviors by Latent Imagination (DreamerV1)        | Hafner et al.        | 2020 | **ICLR 2020**    | **1,787**  | [arxiv.org/abs/1912.01603](https://arxiv.org/abs/1912.01603) |
+| 4   | World Models                                                                  | Ha & Schmidhuber     | 2018 | **NeurIPS 2018** | **1,559**  | [arxiv.org/abs/1803.10122](https://arxiv.org/abs/1803.10122) |
 
 ## A-Tier（300-999 引用）
 
@@ -52,18 +51,29 @@
 
 ## C-Tier（前沿新作，2024-2026）
 
-| # | 论文 / 项目 | 作者 | 年份 | 会议 | 引用 | 链接 |
-|---|-------------|------|------|------|------|------|
-| 30 | V-JEPA 2: Self-Supervised Video Models Enable Understanding | Meta | 2025 | arXiv | 新 | [arxiv.org/abs/2506.09985](https://arxiv.org/abs/2506.09985) |
-| 31 | Dreamer4 | Hafner et al. | 2025 | arXiv | 新 | [arxiv.org/abs/2509.24527](https://arxiv.org/abs/2509.24527) |
-| 32 | LeWorldModel (LeWM) | LeCun team | 2026 | arXiv | 新 | [arxiv.org/abs/2603.19312](https://arxiv.org/abs/2603.19312) |
-| 33 | GAIA-2: A Platform for Embodied AI in Complex Worlds | Wayve | 2025 | arXiv | 新 | [arxiv.org/abs/2503.20523](https://arxiv.org/abs/2503.20523) |
-| 34 | GAIA-3 | Wayve | 2025 | 博客 | 新 | [wayve.ai](https://wayve.ai/press/wayve-launches-gaia3/) |
-| 35 | Genie 2: A Large-Scale Foundation World Model | DeepMind | 2024 | 博客 | 新 | [deepmind.google](https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/) |
-| 36 | Genie 3: A New Frontier for World Models | DeepMind | 2025 | 博客 | 新 | [deepmind.google](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) |
-| 37 | GameGen-X: Interactive Open-world Game Video Generation | Che et al. | 2024 | **ICLR 2025** | 新 | [arxiv.org/abs/2411.00769](https://arxiv.org/abs/2411.00769) |
-| 38 | Sora 2 | OpenAI | 2025 | 博客 | 新 | [openai.com](https://openai.com/index/sora-2/) |
-| 39 | Othello-GPT: Emergent World Representations | Li et al. | 2023 | **ICLR 2023** | 新 | [arxiv.org/abs/2210.13382](https://arxiv.org/abs/2210.13382) |
+| # | 论文 / 项目 | 作者 | 年份 | 会议 | Stars/引用 | 链接 |
+|---|-------------|------|------|------|------------|------|
+| 29 | V-JEPA 2: Self-Supervised Video Models Enable Understanding | Meta | 2025 | arXiv | 新 | [arxiv.org/abs/2506.09985](https://arxiv.org/abs/2506.09985) |
+| 30 | Dreamer4 | Hafner et al. | 2025 | arXiv | 新 | [arxiv.org/abs/2509.24527](https://arxiv.org/abs/2509.24527) |
+| 31 | LeWorldModel (LeWM) | LeCun team | 2026 | arXiv | 新 | [arxiv.org/abs/2603.19312](https://arxiv.org/abs/2603.19312) |
+| 32 | GAIA-2 | Wayve | 2025 | arXiv | 新 | [arxiv.org/abs/2503.20523](https://arxiv.org/abs/2503.20523) |
+| 33 | GAIA-3 | Wayve | 2025 | 博客 | 新 | [wayve.ai](https://wayve.ai/press/wayve-launches-gaia3/) |
+| 34 | Genie 2 | DeepMind | 2024 | 博客 | 新 | [deepmind.google](https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/) |
+| 35 | Genie 3 | DeepMind | 2025 | 博客 | 新 | [deepmind.google](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) |
+| 36 | GameGen-X | Che et al. | 2024 | **ICLR 2025** | 新 | [arxiv.org/abs/2411.00769](https://arxiv.org/abs/2411.00769) |
+| 37 | Sora 2 | OpenAI | 2025 | 博客 | 新 | [openai.com](https://openai.com/index/sora-2/) |
+| 38 | Othello-GPT: Emergent World Representations | Li et al. | 2023 | **ICLR 2023** | 新 | [arxiv.org/abs/2210.13382](https://arxiv.org/abs/2210.13382) |
+| 39 | lingbot-world: Advancing Open-source World Models | Robbyant | 2025 | GitHub | ⭐3.3K | [github.com/Robbyant/lingbot-world](https://github.com/Robbyant/lingbot-world) |
+| 40 | HunyuanWorld 1.0: Immersive 3D World Generation | 腾讯混元 | 2025 | GitHub | ⭐2.7K | [github.com/Tencent-Hunyuan/HunyuanWorld-1.0](https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0) |
+| 41 | Helios: Real-time Long Video Generation | PKU | 2025 | GitHub | ⭐1.6K | [github.com/PKU-YuanGroup/Helios](https://github.com/PKU-YuanGroup/Helios) |
+| 42 | Cosmos-Predict2.5 | NVIDIA | 2025 | GitHub | ⭐1K | [github.com/nvidia-cosmos/cosmos-predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5) |
+| 43 | Causal-Forcing: AR Diffusion Distillation for Real-Time Interactive Video | 清华 | 2025 | GitHub | ⭐537 | [github.com/thu-ml/Causal-Forcing](https://github.com/thu-ml/Causal-Forcing) |
+| 44 | DayDreamer: World Models for Physical Robot Learning | Hafner | 2022 | RSS 2023 | ⭐410 | [github.com/danijar/daydreamer](https://github.com/danijar/daydreamer) |
+| 45 | TesserAct: Learning 4D Embodied World Models | UMass | 2025 | **ICCV 2025** | ⭐385 | [github.com/UMass-Embodied-AGI/TesserAct](https://github.com/UMass-Embodied-AGI/TesserAct) |
+| 46 | CarDreamer: World Model based Autonomous Driving in CARLA | UC Davis | 2024 | GitHub | ⭐335 | [github.com/ucd-dare/CarDreamer](https://github.com/ucd-dare/CarDreamer) |
+| 47 | Epona: AR Diffusion World Model for Autonomous Driving | 清华 | 2025 | **ICCV 2025** | ⭐327 | [github.com/Kevin-thu/Epona](https://github.com/Kevin-thu/Epona) |
+| 48 | PointWorld: Scaling 3D World Models for Robotic Manipulation | NVIDIA | 2025 | GitHub | ⭐250 | [github.com/NVlabs/PointWorld](https://github.com/NVlabs/PointWorld) |
+| 49 | LS-Imagine: Open-World RL over Long Short-Term Imagination | — | 2025 | **ICLR 2025 Oral** | ⭐207 | [github.com/qiwang067/LS-Imagine](https://github.com/qiwang067/LS-Imagine) |
 
 ---
 
@@ -71,64 +81,72 @@
 
 ### Games / RL（游戏与强化学习）
 
-- #5 Ha & Schmidhuber (1,559) — World Models 奠基之作，VAE + MDN-RNN 在"梦境"中训练 Agent
-- #2 MuZero (3,000+) — 学习规则 + 搜索规划，无需知道环境规则
-- #4 DreamerV1 (1,787) — 潜在空间想象训练，开创 Dreamer 系列
-- #12 DreamerV2 (~484) — 离散 world model，解决连续表征问题
-- #6 DreamerV3 (983) — 通用 world model，150+ 任务，登上 Nature
-- #31 Dreamer4 — 最新迭代
-- #17 EfficientZero (318) — 100K interaction 步内超越人类
-- #18 IRIS (286) — Transformer-based world model，样本效率
-- #26 DIAMOND (~150) — Diffusion world model，NeurIPS Spotlight
-- #29 STORM (111) — 高效随机 Transformer world model
-- #16 TD-MPC (376) — 时间差分 + MPC
-- #27 TD-MPC2 (~150) — 可扩展 world model
-- #23 GameNGen (191) — Diffusion 实时游戏引擎（DOOM 20fps）
-- #37 GameGen-X — 开放世界游戏视频生成
-- #20 Genie (~250) — 从视频学习交互式环境
-- #35 Genie 2 — 大规模基础 world model
-- #36 Genie 3 — 24fps/720p 实时生成
+- #4 Ha & Schmidhuber (1,559) — World Models 奠基之作
+- #1 MuZero (3,000+) — 学习规则 + 搜索规划
+- #3 DreamerV1 (1,787) → #11 DreamerV2 (~484) → #5 DreamerV3 (983, Nature) → #30 Dreamer4
+- #16 EfficientZero (318) — 100K 步超越人类
+- #17 IRIS (286) — Transformer world model
+- #25 DIAMOND (~150) — Diffusion world model，NeurIPS Spotlight
+- #28 STORM (111) — 高效随机 Transformer
+- #15 TD-MPC (376) → #26 TD-MPC2 (~150)
+- #22 GameNGen (191) — Diffusion 实时游戏引擎（DOOM 20fps）
+- #36 GameGen-X — 开放世界游戏视频生成 (ICLR 2025)
+- #19 Genie (~250) → #34 Genie 2 → #35 Genie 3 (24fps/720p)
+- #49 LS-Imagine — 开放世界 RL (ICLR 2025 Oral)
 
 ### Video Generation（视频生成）
 
-- #7 Sora (~800) — 视频生成模型作为 world simulator
-- #38 Sora 2 — 下一代
-- #15 UniSim (378) — 交互式真实世界模拟器
-- #26 DIAMOND (~150) — Diffusion-based，可实时交互
+- #6 Sora (~800) → #37 Sora 2
+- #14 UniSim (378) — 交互式真实世界模拟器
+- #39 lingbot-world ⭐3.3K — 开源 world model，分钟级 rollout
+- #41 Helios ⭐1.6K — 实时长视频生成 (PKU)
+- #43 Causal-Forcing ⭐537 — 实时交互视频生成 (清华)
+- #42 Cosmos-Predict2.5 ⭐1K — NVIDIA 最新
 
 ### Autonomous Driving（自动驾驶）
 
-- #11 GAIA-1 (487) — 自动驾驶生成式 world model
-- #33 GAIA-2 — Embodied AI 平台
-- #34 GAIA-3 — 最新
-- #19 DriveDreamer (252) — 真实世界驾驶 world model
-- #24 GenAD (189) — 泛化预测驾驶模型
-- #25 OccWorld (~150) — 3D 占据 world model
+- #10 GAIA-1 (487) → #32 GAIA-2 → #33 GAIA-3
+- #18 DriveDreamer (252)
+- #23 GenAD (189) — 泛化预测驾驶模型 (ECCV 2024)
+- #24 OccWorld (~150) — 3D 占据 world model
+- #46 CarDreamer ⭐335 — CARLA 平台
+- #47 Epona ⭐327 — AR Diffusion (ICCV 2025)
 
 ### Robotics（机器人）
 
-- #8 RT-2 (~800) — 视觉-语言-动作模型
-- #14 Inner Monologue (~400) — 语言模型具身推理
-- #30 V-JEPA 2 — 100 万小时视频训练，zero-shot 机器人规划
+- #7 RT-2 (~800) — 视觉-语言-动作模型
+- #13 Inner Monologue (~400) — 语言模型具身推理
+- #29 V-JEPA 2 — 100 万小时视频，zero-shot 机器人规划
+- #44 DayDreamer ⭐410 — World model 训练物理机器人 (Hafner)
+- #45 TesserAct ⭐385 — 4D Embodied World Model (ICCV 2025)
+- #48 PointWorld ⭐250 — 3D world model for manipulation (NVIDIA)
+
+### 3D / Spatial（3D 空间智能）
+
+- #40 HunyuanWorld 1.0 ⭐2.7K — 腾讯混元 3D 世界生成
+- World Labs Marble — Fei-Fei Li, $1.23B 融资
 
 ### Planning / Reasoning（规划与推理）
 
-- #1 Tree of Thoughts (3,634) — LLM 深度推理与搜索
-- #10 RAP (~500) — LLM 作为 world model + agent
-- #13 LATS (409) — 统一推理、行动、规划
-- #39 Othello-GPT — LLM 涌现 world model 表征
+- #9 RAP (~500) — LLM 作为 world model + agent
+- #12 LATS (409) — 统一推理、行动、规划
+- #38 Othello-GPT — LLM 涌现 world model 表征
+
+> Note: Tree of Thoughts (3,634 引用) 已移至 reasoning 论文索引，其核心贡献是搜索策略而非 world modeling
 
 ### JEPA 系列
 
-- #3 LeCun JEPA Vision (3,000+) — 六模块认知架构
-- #9 I-JEPA (718) — 图像自监督学习
-- #22 V-JEPA (~200) — 视频 JEPA
-- #30 V-JEPA 2 — 100 万小时视频
-- #32 LeWM — JEPA 架构 world model，1500 万参数
+- #2 LeCun JEPA Vision (3,000+) — 六模块认知架构
+- #8 I-JEPA (718) — 图像自监督学习
+- #21 V-JEPA (~200) → #29 V-JEPA 2 — 100 万小时视频
+- #31 LeWM — 1500 万参数，解决 representation collapse
 
-### 综述
+### 综述 & Awesome Lists
 
-- #28 Understanding World or Predicting Future? (~120) — 最全面的 World Model 综述，ACM CSUR 2025
+- #27 Understanding World or Predicting Future? (~120) — ACM CSUR 2025
+- [Awesome-World-Models](https://github.com/knightnemo/Awesome-World-Models) ⭐2.5K — 最大的社区资源合集
+- [awesome-3d-4d-world-models](https://github.com/worldbench/awesome-3d-4d-world-models) ⭐875 — 3D/4D 专题
+- [World-Models-Autonomous-Driving-Survey](https://github.com/HaoranZhuExplorer/World-Models-Autonomous-Driving-Survey) ⭐508 — 自动驾驶专题
 
 ---
 

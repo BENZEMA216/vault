@@ -45,3 +45,12 @@
 - Restructured index.md by domain category
 - Updated CLAUDE.md schema with full AK workflow spec
 - Source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+
+## [2026-04-06] update | World Model 论文索引补充 + ToT 迁移
+- Source: https://github.com/topics/world-models (210 repos)
+- 移除 Tree of Thoughts（非 world model，迁至 reasoning 索引）
+- 新增 11 个项目/论文：lingbot-world, HunyuanWorld, Helios, Cosmos-Predict2.5, Causal-Forcing, DayDreamer, TesserAct, CarDreamer, Epona, PointWorld, LS-Imagine
+- 新增 3 个 awesome lists 引用
+- 新增 3D/Spatial 分类
+- 创建 raw/papers/reasoning/LLM-Reasoning-Paper-Index.md（含 ToT + CoT）
+- 论文索引：39 → 49 篇
