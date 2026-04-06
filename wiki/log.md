@@ -84,3 +84,10 @@
 - Obsidian AI 插件赛道无人做 LLM-compiled wiki
 - 验证路径: vault demo → 社区反馈 → 最简插件 → 提交社区
 - 产出归档至 raw/articles/llm-wiki-product-opportunity.md
+
+## [2026-04-07] query | Knowledge Agent Network — 从个人知识库到知识经济
+- 从 AK Wiki 插件发散到 Agent 互联：每个人的 wiki 是一个 Agent 节点
+- 四阶段演进：Obsidian 插件 → Wiki Agent API → Agent 网络 → Knowledge Economy
+- 评分：Phase 1 = 23/30, Phase 4 = 28/30
+- 与 Dongzhe 的 Agent Economy 研究完美对齐（补 AGNTCY 缺的 economic layer）
+- 产出归档至 raw/articles/knowledge-agent-network-idea.md
