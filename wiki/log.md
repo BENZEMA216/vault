@@ -91,3 +91,16 @@
 - 评分：Phase 1 = 23/30, Phase 4 = 28/30
 - 与 Dongzhe 的 Agent Economy 研究完美对齐（补 AGNTCY 缺的 economic layer）
 - 产出归档至 raw/articles/knowledge-agent-network-idea.md
+
+## [2026-04-07] query | Knowledge Agent Network 网络设计
+- 冷启动方案: 从 3-5 人知识圈开始（非 C 端）
+- 网络拓扑: 主题路由（C 方案）最 Agent-native
+- 激励: 互惠 → 声誉 → 经济（分阶段）
+- 最小有用单元: 深度研究变成可被全网 Agent 调用的知识服务
+- 产出归档至 raw/articles/knowledge-agent-network-design.md
+
+## [2026-04-07] build | Wiki MCP Server
+- 将知识库暴露为 MCP Server（5 个 tools）
+- GitHub: BENZEMA216/wiki-mcp-server
+- 已注册到本地 ~/.mcp.json
+- Knowledge Agent Network 的第一个节点
