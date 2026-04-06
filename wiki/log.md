@@ -76,3 +76,11 @@
 - 对标: 目前无人做全栈，Minecraft 生态最接近
 - Dongzhe 交叉点: Agent Harness + Communication + Economy 填 Layer 2
 - 产出归档至 raw/articles/world-model/che-haoxuan-startup-analysis.md
+
+## [2026-04-06] query | LLM Wiki 产品机会分析
+- AK 说 "room for an incredible new product"
+- 最小切入点: Obsidian 插件（不是独立产品）
+- 评分 23/30（细化），核心差异: 搜索 vs 编译
+- Obsidian AI 插件赛道无人做 LLM-compiled wiki
+- 验证路径: vault demo → 社区反馈 → 最简插件 → 提交社区
+- 产出归档至 raw/articles/llm-wiki-product-opportunity.md
