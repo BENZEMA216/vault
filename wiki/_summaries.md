@@ -235,6 +235,16 @@
 - 关键概念：[[concepts/agent-communication]], [[concepts/tool-routing]]
 - 约 18000 字
 
+### `raw/articles/world-model/paper-index.md`
+> World Model 论文索引：覆盖 39 篇论文，按引用量分为 S/A/B/C 四个 Tier，按领域分为 Games/RL、Video Generation、Autonomous Driving、Robotics、Planning/Reasoning、JEPA 六大类，含开源资源和 Benchmark 信息
+- 关键概念：[[concepts/world-model]], [[concepts/agent-loop]]
+- 约 8000 字
+
+### `raw/articles/world-model/deep-research.md`
+> World Model 深度研究报告：五大架构路线（Autoregressive/Diffusion/JEPA/SSM/3D Spatial）对比、"LLM 有没有 World Model"辩论（LeCun 反方 vs Othello-GPT 正方）、LeCun 六模块认知架构、LeWM 2026 突破（1500 万参数/48x 更快）、V-JEPA 2（100 万小时视频/zero-shot robot）、$80亿+ 融资产品格局、Scaling Laws、创意应用、2026 下半年 6 条趋势判断
+- 关键概念：[[concepts/world-model]], [[concepts/agent-loop]], [[concepts/video-agent-workflow]]
+- 约 15000 字
+
 ### `raw/articles/claude-code-research/Agent System Prompt 研究.md`
 > 4 大主流 Agent System Prompt 横向对比：Manus、Claude Code、Cursor、Devin 的设计哲学差异
 - 关键概念：[[concepts/modular-prompt-architecture]], [[concepts/agent-loop]], [[concepts/skills-system]]

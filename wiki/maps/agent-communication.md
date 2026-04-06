@@ -88,15 +88,15 @@ Stage 4: ANP     → 开放互联网去中心化 Agent 网络（观望）
 
 ### 七种通信模式总览
 
-| # | Pattern | 代表论文 | 核心机制 | 关键数据 |
-|---|---------|----------|----------|----------|
-| 1 | Debate/Discussion | Du et al. (ICML 2024) | 多 LLM 互看回答 + 多轮辩论 | 提升推理，但无法一致性超越 single-agent |
-| 2 | Role-Playing | CAMEL, ChatDev, MetaGPT | 角色分配 + SOP + Chat Chain | MetaGPT HumanEval 85.9% |
-| 3 | Hierarchical Delegation | DyLAN, AutoGen | 动态 Agent 选择 + 可编程对话 | DyLAN: MATH +13%, HumanEval +13.3% |
-| 4 | Blackboard | LLM-Based Blackboard (2025) | 共享工作区 + 自愿竞标 | +57% 任务成功率 |
-| 5 | Market-Based | Gho et al. (2025-2026) | 概率信念交换 + "交易" 趋向共识 | +10% accuracy, 可解释 |
-| 6 | Emergent | Machine Language (2025) | Referential game → 共享语言涌现 | 4 轮通信即可 |
-| 7 | Latent Space | C2C, LatentMAS, ThoughtComm | KV-cache 投影 / 隐空间直接传输 | 2.5-471x 效率提升 |
+| #   | Pattern                 | 代表论文                        | 核心机制                      | 关键数据                               |
+| --- | ----------------------- | --------------------------- | ------------------------- | ---------------------------------- |
+| 1   | Debate/Discussion       | Du et al. (ICML 2024)       | 多 LLM 互看回答 + 多轮辩论         | 提升推理，但无法一致性超越 single-agent         |
+| 2   | Role-Playing            | CAMEL, ChatDev, MetaGPT     | 角色分配 + SOP + Chat Chain   | MetaGPT HumanEval 85.9%            |
+| 3   | Hierarchical Delegation | DyLAN, AutoGen              | 动态 Agent 选择 + 可编程对话       | DyLAN: MATH +13%, HumanEval +13.3% |
+| 4   | Blackboard              | LLM-Based Blackboard (2025) | 共享工作区 + 自愿竞标              | +57% 任务成功率                         |
+| 5   | Market-Based            | Gho et al. (2025-2026)      | 概率信念交换 + "交易" 趋向共识        | +10% accuracy, 可解释                 |
+| 6   | Emergent                | Machine Language (2025)     | Referential game → 共享语言涌现 | 4 轮通信即可                            |
+| 7   | Latent Space            | C2C, LatentMAS, ThoughtComm | KV-cache 投影 / 隐空间直接传输     | 2.5-471x 效率提升                      |
 
 ---
 
