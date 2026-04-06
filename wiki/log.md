@@ -60,3 +60,13 @@
 - 核心发现：Sora 关闭 + AMI Labs $1.03B + LeWM 15M 参数 + Densing Law
 - 五个范式转变：Video Gen≠WM 定论、JEPA 实践化、WMaaS 机会、效率革命、自动驾驶 killer app
 - Wiki state: 23 concepts, 6 maps, 6 connections
+
+## [2026-04-06] ingest | Interactive Video Benchmark 全景
+- 24 个 benchmark，9 类 metrics
+- 关键发现：Game/Interactive 赛道缺统一标准
+
+## [2026-04-06] query | World Model 定义问题分析
+- 核心洞察：三种定义（Agent 工具 / 物理理解 / 模拟逼真）互不兼容
+- 当前 benchmark 各测不同东西，都叫 "World Model"
+- 缺失方向：1+2 交叉（因理解物理而能 zero-shot 适应新环境的 Agent）
+- 产出归档至 raw/articles/world-model/world-model-definition-problem.md
