@@ -161,6 +161,15 @@
 - 工程野心: slock.ai 同时占协作介质层 + 本地 daemon 执行层
 - output/reports/richard-chien/slock-ai-research.md 已全文重写
 
+## [2026-04-07] query | 国内产品型创业第一笔融资深度研究
+- 3 路并行 subagent 研究: 融资渠道全景 + 奇绩创坛专题 + 2026 真实案例 20 个
+- 8 种渠道速查表 + 20 个真实融资案例 + 典型时间线
+- 核心判断: 2026 不是寒冬是分化年；Super-Individual 是正规叙事；Vibe coding 改变游戏规则
+- 对 Dongzhe 的三条路径: 奇绩创坛(最稳) / MiroFish-style 病毒杠杆(高方差) / Thesis 投资人(中等)
+- 推荐: 先做 bootstrapped 3 个月 → 奇绩创坛 → 个人天使 (陈天桥/王慧文/朱啸虎个人)
+- 首轮锚点: ¥500-1500 万 + 投后 ¥5000 万-¥1.2 亿
+- 产出归档至 output/reports/china-product-startup-first-funding.md
+
 ## [2026-04-07] ingest | Richard Chien 完整 agent stack
 - 看了 stdrc GitHub 后发现：他不是在做单个产品，是在搭整个 agent stack
 - ⚠️ 第二次修正：Botiverse 是 RC 的真实 GitHub org（2023-05 创建），不是无关
