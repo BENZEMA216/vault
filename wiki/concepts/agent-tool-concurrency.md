@@ -29,7 +29,7 @@
 |------|------|
 | `raw/articles/agent-tool-concurrency-discussion.md` | 三种路径完整讨论 + 时间轴对比 + 主流框架现状表 + KAN 启示 |
 | `raw/articles/claude-code-source-analysis.md` | Claude Code v2.1.87 一手代码分析：`C68` streaming executor、`isConcurrencySafe` 谓词、`_N8` generator merge、feature gate |
-| `raw/articles/richard-chien-code-review.md` | kosong `handle()` Protocol 完整设计、ToolCall vs ToolCallPart 分离、`asyncio.create_task` future 模式 |
+| `raw/articles/richard-chien/code-review.md` | kosong `handle()` Protocol 完整设计、ToolCall vs ToolCallPart 分离、`asyncio.create_task` future 模式 |
 
 ## 关联概念
 

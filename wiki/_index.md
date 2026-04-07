@@ -46,12 +46,12 @@
 - `raw/articles/learning-notes/0620-anthropic-agent-cookbook.md` — Anthropic Agent Cookbook
 - `raw/articles/learning-notes/0707-12-factor-agent.md` — 12 Factor Agent
 - `raw/articles/learning-notes/0702-scaling-test-time-compute.md` — Scaling Test Time Compute
-- `raw/articles/richard-chien-stack.md` — RC 早期技术栈研究
-- `raw/articles/richard-chien-deep-profile.md` — RC 完整人物档案（38 repo + botiverse）
-- `raw/articles/richard-chien-code-review.md` — 7 个项目 ~19,000 LOC 源码级评审
+- `raw/articles/richard-chien/stack.md` — RC 早期技术栈研究
+- `raw/articles/richard-chien/deep-profile.md` — RC 完整人物档案（38 repo + botiverse）
+- `raw/articles/richard-chien/code-review.md` — 7 个项目 ~19,000 LOC 源码级评审
 - `raw/articles/claude-code-source-analysis.md` — Claude Code v2.1.87 cli.js 一手分析
 - `raw/articles/agent-tool-concurrency-discussion.md` — Tool 并发模型三种路径完整讨论
-- `raw/articles/slock-ai-research.md` — slock.ai agent-native IM 深度研究
+- `raw/articles/richard-chien/slock-ai-research.md` — slock.ai agent-native IM 深度研究
 - `raw/articles/mirofish-research.md` — MiroFish 多 agent 仿真产品化案例
 - `raw/articles/oasis-camel-ai-research.md` — OASIS 1M agents 社会模拟框架
 - `raw/articles/oasis-followup-discussion.md` — OASIS 后续讨论与 Dongzhe-fit 角度

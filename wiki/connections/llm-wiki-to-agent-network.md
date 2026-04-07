@@ -79,7 +79,7 @@ KAN 是供给侧（每个节点提供 compiled knowledge），而 OASIS / MiroFi
 
 ## 与 Richard Chien 的协议优先哲学
 
-RC 的工程哲学（详见 `raw/articles/richard-chien-deep-profile.md`）是 **"先做协议、再做框架、最后才是产品"**——CQHTTP → OneBot → NoneBot 是这条线的第一个验证（13,000+ stars 的中文 chatbot 生态），Wire → kosong → kimi-cli 是第二个验证。
+RC 的工程哲学（详见 `raw/articles/richard-chien/deep-profile.md`）是 **"先做协议、再做框架、最后才是产品"**——CQHTTP → OneBot → NoneBot 是这条线的第一个验证（13,000+ stars 的中文 chatbot 生态），Wire → kosong → kimi-cli 是第二个验证。
 
 **LLM Wiki → KAN 是第三条同构路径**：
 - Phase 1 = 先把"compile knowledge"这个原语做对（pattern）

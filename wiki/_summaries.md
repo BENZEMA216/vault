@@ -739,12 +739,12 @@
 - 关键概念：[[concepts/knowledge-agent-network]]
 - 约 800 字
 
-### `raw/articles/richard-chien-deep-profile.md`
+### `raw/articles/richard-chien/deep-profile.md`
 > RC (stdrc) 完整人物档案：38 个 GitHub repo + botiverse org + 工程哲学（协议人 + Empty Layer 美学 + 跨品牌中立）+ 双线工程（Moonshot in-house + botiverse solo）+ Hidden Gems 8 个 + 与 Dongzhe 工作的 6 个连接点
 - 关键概念：[[concepts/agent-native-im]], [[concepts/agent-tool-concurrency]], [[concepts/knowledge-agent-network]], [[maps/agent-harness-implementations]]
 - 约 5500 字
 
-### `raw/articles/richard-chien-code-review.md`
+### `raw/articles/richard-chien/code-review.md`
 > RC 7 个项目源码级评审：kimi-cli (~25-35k LOC) + kosong (~4.2k LOC) + agent-vault (~1.1k LOC) + OneBot 协议 + kimchi 占位 fork + tldr-vscode + pink。kimi-cli `_step()` 7 个核心机制（D-Mail 时光机、Ralph loop、Steer、持久化 sub-agent、Wire external tool、Dynamic injection、Token 双轨计数）。RC 是「协议人」+「Empty Layer 美学」的统一者
 - 关键概念：[[concepts/agent-tool-concurrency]], [[maps/agent-harness-implementations]], [[concepts/knowledge-agent-network]]
 - 约 8000 字
@@ -759,7 +759,7 @@
 - 关键概念：[[concepts/agent-tool-concurrency]], [[concepts/knowledge-agent-network]]
 - 约 3500 字
 
-### `raw/articles/slock-ai-research.md`
+### `raw/articles/richard-chien/slock-ai-research.md`
 > slock.ai 完整研究（修正作者为 Richard Chien）：agent-native IM、Slack 风格 + 本地 daemon、3 大差异化 (Remember / One Conversation / Your Machines)、`@slock-ai/daemon` npm 包、与 HiClaw / RockClaw 同赛道对照、在 Dongzhe Agent Economy 栈中占协作介质 + 本地执行两层
 - 关键概念：[[concepts/agent-native-im]], [[concepts/agent-communication]]
 - 约 1800 字

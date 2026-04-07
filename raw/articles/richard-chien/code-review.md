@@ -8,15 +8,15 @@
 
 ## 总览
 
-| 项目 | 类型 | 规模 | 角色 |
-|---|---|---|---|
-| **kimi-cli** | Python agent harness | ~25-35k LOC | RC 主战场（Moonshot） |
-| **kosong** | Python LLM 抽象层 | ~4,200 LOC | kimi-cli 的 LLM 层 |
-| **agent-vault** | TypeScript secrets layer | ~1,100 LOC | botiverse 已发布产品 |
-| **OneBot** | Spec only | Markdown | 2020 年 chatbot 协议标准 |
-| **kimchi** | Fork (空) | 0 独有 commits | botiverse 的 kimi-cli 占位 |
-| **tldr-vscode** | TypeScript VSCode 扩展 | ~1k LOC | LLM-friendly stub renderer |
-| **pink** | Python TUI framework | ~500 LOC | Ink 的 Python 移植 |
+| 项目              | 类型                       | 规模           | 角色                         |
+| --------------- | ------------------------ | ------------ | -------------------------- |
+| **kimi-cli**    | Python agent harness     | ~25-35k LOC  | RC 主战场（Moonshot）           |
+| **kosong**      | Python LLM 抽象层           | ~4,200 LOC   | kimi-cli 的 LLM 层           |
+| **agent-vault** | TypeScript secrets layer | ~1,100 LOC   | botiverse 已发布产品            |
+| **OneBot**      | Spec only                | Markdown     | 2020 年 chatbot 协议标准        |
+| **kimchi**      | Fork (空)                 | 0 独有 commits | botiverse 的 kimi-cli 占位    |
+| **tldr-vscode** | TypeScript VSCode 扩展     | ~1k LOC      | LLM-friendly stub renderer |
+| **pink**        | Python TUI framework     | ~500 LOC     | Ink 的 Python 移植            |
 
 ---
 
@@ -35,14 +35,14 @@
 
 **最关键的发现**: OneBot 和 Kimi Wire 几乎是**同一份设计的两次实现**：
 
-| 维度 | OneBot 12 | Kimi Wire 1.7 |
-|---|---|---|
-| 解决问题 | N 平台 × M 框架 | N LLM × M UI/IDE |
-| 错误码 | retcode 分段（10xxx/20xxx/30xxx + 36xxx "I Am Tired"）| JSON-RPC 标准段 + 业务段（-32000 turn already running 等）|
-| 异步关联 | `echo` 字段 | JSON-RPC `id` |
-| 能力发现 | `get_supported_actions` | `initialize.capabilities` + `slash_commands` + `supported_events` |
-| 双向 RPC | event push + action request | event push + 双向 request（agent 反向问 client）|
-| 扩展机制 | `<prefix>.field` 命名空间 | `external_tools` + `hooks` + `client_capabilities` |
+| 维度     | OneBot 12                                          | Kimi Wire 1.7                                                     |
+| ------ | -------------------------------------------------- | ----------------------------------------------------------------- |
+| 解决问题   | N 平台 × M 框架                                        | N LLM × M UI/IDE                                                  |
+| 错误码    | retcode 分段（10xxx/20xxx/30xxx + 36xxx "I Am Tired"） | JSON-RPC 标准段 + 业务段（-32000 turn already running 等）                 |
+| 异步关联   | `echo` 字段                                          | JSON-RPC `id`                                                     |
+| 能力发现   | `get_supported_actions`                            | `initialize.capabilities` + `slash_commands` + `supported_events` |
+| 双向 RPC | event push + action request                        | event push + 双向 request（agent 反向问 client）                         |
+| 扩展机制   | `<prefix>.field` 命名空间                              | `external_tools` + `hooks` + `client_capabilities`                |
 
 **RC 在 2020 年就把 2026 年 agent 协议要解决的问题想清楚了。**
 
@@ -80,15 +80,15 @@ _step():
 
 ### 7 个核心机制
 
-| 机制 | 实现 | 价值 |
-|---|---|---|
-| **D-Mail 物理时光机** | append-only JSONL + `_checkpoint` 行 + revert_to() 重写文件 | LLM 自己说"我刚才走错了" → 物理回滚到 checkpoint，重跑一条伪 user 消息 |
-| **Ralph loop** | 用 Flow 状态机实现（BEGIN → R1 task → R2 decision → CONTINUE/STOP）| Geoffrey Huntley 的"反复喂回去"技巧产品化 |
-| **Steer**（v1.4） | `_steer_queue` + `_consume_pending_steers` | 在 LLM 流式输出中注入新 user 消息，下一步消化 |
-| **持久化 sub-agent** | `SubagentStore` 把每个子 agent 持久化到 `session/subagents/<agent_id>/` | **可 resume 的子 agent**，比 Claude Code 的 Task tool 强 |
-| **Wire external tool** | client 在 initialize 时注册工具 → LLM 调用时反向 wire request | **IDE 可以反向给 agent 注入工具**，不止是消费事件 |
-| **Dynamic injection** | 周期性注入 `<system-reminder>`（plan mode 每 5 turn，full/sparse 节奏）| 防漂移 + 保持 prompt cache |
-| **Token 双轨计数** | LLM usage（精确）+ pending estimate（粗）= compaction 决策 | 解决 "tool result 还没回 LLM 就 overflow" 死角 |
+| 机制                     | 实现                                                              | 价值                                                |
+| ---------------------- | --------------------------------------------------------------- | ------------------------------------------------- |
+| **D-Mail 物理时光机**       | append-only JSONL + `_checkpoint` 行 + revert_to() 重写文件          | LLM 自己说"我刚才走错了" → 物理回滚到 checkpoint，重跑一条伪 user 消息  |
+| **Ralph loop**         | 用 Flow 状态机实现（BEGIN → R1 task → R2 decision → CONTINUE/STOP）     | Geoffrey Huntley 的"反复喂回去"技巧产品化                    |
+| **Steer**（v1.4）        | `_steer_queue` + `_consume_pending_steers`                      | 在 LLM 流式输出中注入新 user 消息，下一步消化                      |
+| **持久化 sub-agent**      | `SubagentStore` 把每个子 agent 持久化到 `session/subagents/<agent_id>/` | **可 resume 的子 agent**，比 Claude Code 的 Task tool 强 |
+| **Wire external tool** | client 在 initialize 时注册工具 → LLM 调用时反向 wire request              | **IDE 可以反向给 agent 注入工具**，不止是消费事件                  |
+| **Dynamic injection**  | 周期性注入 `<system-reminder>`（plan mode 每 5 turn，full/sparse 节奏）    | 防漂移 + 保持 prompt cache                             |
+| **Token 双轨计数**         | LLM usage（精确）+ pending estimate（粗）= compaction 决策               | 解决 "tool result 还没回 LLM 就 overflow" 死角            |
 
 ### Compaction 是 Claude Code 学派但更结构化
 

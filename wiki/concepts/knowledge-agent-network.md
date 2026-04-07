@@ -32,8 +32,8 @@
 | `raw/articles/knowledge-agent-network-idea.md` | 完整愿景：四阶段、技术架构图、与现有方案对比、评分卡 |
 | `raw/articles/knowledge-agent-network-design.md` | 网络生效机制：冷启动、激励、拓扑、Step 0-4 启动路径 |
 | `raw/articles/llm-wiki-product-opportunity.md` | Phase 1 的产品化 (Obsidian 插件)、与 Notion AI/NotebookLM 差异化 |
-| `raw/articles/richard-chien-deep-profile.md` | RC 的 slock.ai = "agents and humans collaborate as equals" 是 KAN 的协作介质参考 |
-| `raw/articles/richard-chien-code-review.md` | Wire 协议、agent-vault placeholder、tldr stub 渲染都是 KAN 协议层可借鉴的设计 |
+| `raw/articles/richard-chien/deep-profile.md` | RC 的 slock.ai = "agents and humans collaborate as equals" 是 KAN 的协作介质参考 |
+| `raw/articles/richard-chien/code-review.md` | Wire 协议、agent-vault placeholder、tldr stub 渲染都是 KAN 协议层可借鉴的设计 |
 
 ## 关联概念
 

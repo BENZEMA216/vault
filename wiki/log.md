@@ -150,7 +150,7 @@
 - 同赛道对照: HiClaw (阿里, Matrix 协议) + RockClaw (社区导向, 250 citizens)
 - Super-individual 叙事第三个案例 (前两个: MiroFish, BENZEMA Wiki MCP)
 - 在 Agent Economy 栈中位置: 协作介质层 (IM/UX 入口层)
-- 产出归档至 raw/articles/slock-ai-research.md
+- 产出归档至 raw/articles/richard-chien/slock-ai-research.md
 
 ## [2026-04-07] correction | slock.ai 作者归属修正
 - ❌ 之前错误: Fanqing Meng (SJTU 多模态 LLM 博士生)
@@ -159,7 +159,7 @@
 - 误判源: 两人都跟 SJTU 有关
 - 信号强度大幅上调: 不是学术 vibe code 玩具, 是十年 chatbot/agent 生态老兵的下一个项目
 - 工程野心: slock.ai 同时占协作介质层 + 本地 daemon 执行层
-- raw/articles/slock-ai-research.md 已全文重写
+- raw/articles/richard-chien/slock-ai-research.md 已全文重写
 
 ## [2026-04-07] ingest | Richard Chien 完整 agent stack
 - 看了 stdrc GitHub 后发现：他不是在做单个产品，是在搭整个 agent stack
@@ -167,7 +167,7 @@
 - 完整 stack：agent-vault (356★, 2 月) + kimi-cli + kosong + pykaos + slock + hakimi + kimchi
 - ⭐ agent-vault 直接对应 KAN 的 secrets 层缺口（占位符模型可复用）
 - "I build ecosystems, not just software" 是字面意义
-- 产出归档至 raw/articles/richard-chien-stack.md
+- 产出归档至 raw/articles/richard-chien/stack.md
 
 ## [2026-04-07] ingest | Richard Chien 完整人物档案
 - 双线深度研究: GitHub 38 repos + Twitter timeline 部分抓取
@@ -179,7 +179,7 @@
 - my-vibe-coding 元仓库 = AK LLM Wiki 的同构形态
 - 网络: follow Xuanwo 等 agent infra 同温层, follower 包含 skyzh
 - 6 个具体连接点到 Dongzhe 的 KAN/Agent Economy/AK Wiki/Agent Deck
-- 产出归档至 raw/articles/richard-chien-deep-profile.md
+- 产出归档至 raw/articles/richard-chien/deep-profile.md
 
 ## [2026-04-07] ingest | Richard Chien 完整生态深度代码评审
 - 5 个并行 subagent 看了 7 个项目源码 (~19,000 LOC)
@@ -193,7 +193,7 @@
 - pink 是 Python 版 Ink，预测将成为 Kimi CLI 下一代 UI
 - 7 个具体可执行的 KAN 启示
 - 一份 RFC 草案: "Wire Protocol Extension: Knowledge Node Discovery and Cross-Node Query"
-- 产出归档至 raw/articles/richard-chien-code-review.md
+- 产出归档至 raw/articles/richard-chien/code-review.md
 
 ## [2026-04-07] ingest | Claude Code 实际源码深度分析（自我修正）
 - 基于本地 cli.js v2.1.87 (12.9MB, 16,750 行) 一手分析 + 2026-03-31 sourcemap 泄露后的多个 RE 仓库
@@ -220,3 +220,14 @@
 - 更新 _index.md: 新增"LLM Wiki Pattern & 知识库基础设施"顶级 domain；Agent 基础设施 section 加 4 个新概念 + 1 个新 map + 2 个新 connection；数据源加 11 个新 raw 文件链接
 - 更新 _summaries.md: 追加 15 个新 raw 文件的摘要条目
 - Wiki 状态: 28 concepts, 7 maps, 8 connections
+
+## [2026-04-07] refactor | RC 相关文件归入 raw/articles/richard-chien/
+- 移动 4 个文件到专用文件夹：
+  - richard-chien-stack.md → richard-chien/stack.md
+  - richard-chien-deep-profile.md → richard-chien/deep-profile.md
+  - richard-chien-code-review.md → richard-chien/code-review.md
+  - slock-ai-research.md → richard-chien/slock-ai-research.md
+- 更新 8 个 wiki 文件的路径引用 (_index, _summaries, log, 2 concepts, 1 map, 1 connection)
+- 保留在外面的主题独立文件：
+  - claude-code-source-analysis.md (Claude Code 主题)
+  - agent-tool-concurrency-discussion.md (通用 agent 框架话题)
