@@ -151,3 +151,12 @@
 - Super-individual 叙事第三个案例 (前两个: MiroFish, BENZEMA Wiki MCP)
 - 在 Agent Economy 栈中位置: 协作介质层 (IM/UX 入口层)
 - 产出归档至 raw/articles/slock-ai-research.md
+
+## [2026-04-07] correction | slock.ai 作者归属修正
+- ❌ 之前错误: Fanqing Meng (SJTU 多模态 LLM 博士生)
+- ✅ 正确: Richard Chien / 余超 (@stdrc), Moonshot AI 前 Kimi CLI 主作者
+- 履历: NoneBot/OneBot 作者 (2016-2020) → SJTU IPADS 硕士 → RisingWave Labs → Moonshot Kimi CLI → slock.ai
+- 误判源: 两人都跟 SJTU 有关
+- 信号强度大幅上调: 不是学术 vibe code 玩具, 是十年 chatbot/agent 生态老兵的下一个项目
+- 工程野心: slock.ai 同时占协作介质层 + 本地 daemon 执行层
+- raw/articles/slock-ai-research.md 已全文重写

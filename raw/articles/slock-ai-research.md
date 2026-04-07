@@ -1,151 +1,187 @@
-# slock.ai 深度研究
+# slock.ai 深度研究（已修正作者）
 
 > 来源: 知识库 Query 讨论 (2026-04-07)
-> 关键词: agent-native IM, vibe coding, super-individual
+> 关键词: agent-native IM, agent collaboration, Moonshot ex, Kimi CLI
+> ⚠️ **2026-04-07 修正**: 作者不是 Fanqing Meng，是 Richard Chien (余超)。详见末尾"修正记录"。
 
 ---
 
 ## TL;DR
 
-**Agent-native 即时通讯平台**，slogan: "Where humans and AI agents collaborate"。
-作者用 vibe coding 在 2026 春节假期 **7 天**做完，**全程没手写一行代码**。
-**不是** 2015 年那个以太坊 IoT 的 Slock.it。
+**Agent-native IM / 协作平台**，slogan: "Where humans and AI agents collaborate. Not as tools. As teammates."
 
-## 消歧义（避免混淆）
+由 **Richard Chien (余超 / @stdrc / @istdrc)** 构建。他之前在 **Moonshot AI 主导构建 Kimi CLI**，更早是国内 chatbot 生态 **NoneBot / OneBot / CQHTTP** 的作者，做过 SJTU IPADS 系统方向硕士、RisingWave Labs core contributor。
+
+**这不是一个学术圈 vibe code prototype，而是一个十年 chatbot/agent 生态老兵 + Moonshot agent infra 主作者的下一个项目。**
+
+## 消歧义
 
 | 名称 | 是什么 | 是否相关 |
 |---|---|---|
-| **slock.ai** | Agent-native IM (2026) | ✅ 本次研究目标 |
-| Slock.it | 2015 德国以太坊智能锁，与 The DAO 事件相关，融资 $2M 后被整合 | ❌ |
+| **slock.ai** | Agent-native IM (2026, RC 作品) | ✅ 本次目标 |
+| Slock.it | 2015 德国以太坊智能锁，The DAO 事件 | ❌ |
 | slock (suckless) | Linux X11 屏幕锁 | ❌ |
-| slock.date | AI 日历管理（撞名） | ❌ |
+| slock.date | AI 日历管理（撞名）| ❌ |
+| Botiverse | 埃及开发者的 Python chatbot 包，与 slock.ai 无关 | ❌（之前误以为是公司主体）|
 
 ## 产品定位
 
-- **品类**: agent-native instant messaging
-- **核心命题**: AI agents 在 IM 中作为 **first-class citizens** 存在
-  - 不是 ChatGPT 那种"人和一个 bot 对话"的范式
-  - 而是把 agent 当作和人类用户对等的参与者放进多人聊天/协作环境
+- **品类**: agent-native instant messaging / collaboration workspace
+- **核心命题**: AI agents 在 IM 中作为 **first-class citizens** —— "Not as tools. As teammates."
 - **官网**: https://slock.ai
 - **slogan**: "Where humans and AI agents collaborate"
+- **footer**: © 2026 Botiverse（**注**: 这个 Botiverse 不是公司名，目前没有公开证据 slock.ai 有注册公司主体）
 
-## 信息密度极低
+## 三个核心差异化（marketing 上明确提的）
 
-官网纯前端 SPA，能抓到的只有 `<title>` + slogan。**没有公开 pricing、feature list、changelog、blog、文档**。这本身就是产品阶段的强信号——个人 demo / soft launch 状态。
+### 1. Agents That Remember
+持久化记忆，跨 session 记得 codebase / 偏好 / 历史对话。
 
-## 工程花絮（作者自述）
+### 2. One Conversation
+频道 + DM，人和 agent 平等参与，无 context switching，无 copy-paste。
 
-- 2026 中国春节假期期间构建
-- 全程 vibe coding，**没有手写一行代码，也没有 review 一行生成的代码**
-- **7 天**完成核心功能 + 部署
-- 一边和朋友聚会一边做的 side project
+### 3. Your Machines, Your Agents ⭐
+**Agent 在你自己的机器上执行**，通过 lightweight daemon。Full control over compute, full privacy over your code and data。
 
-## 创建者：Fanqing Meng（孟繁晴）
+**这是最大的差异化点**：区别于 OpenAI Agents / ChatGPT 的云执行，slock.ai 是 **local-first**。
+
+## 4 步上手流程
+
+```
+01 Create a Server          (Slack 风格)
+02 Connect a Machine        (npx @slock-ai/daemon)
+03 Spawn Agents             (用一段描述定义 agent 角色)
+04 Collaborate              (聊天，agent 持续工作)
+```
+
+## 产品工程细节（从官网/截图）
+
+- 4 个 marketing 用 named agents：**Atlas / Luna / Nova / Echo**
+- Agent 状态机：**Online / Thinking… / Working… / Offline**
+- 设计风格：**黄黑粉 Y2K Notion 美学**（不是 Discord/Slack 的标准蓝绿）
+- URL namespace 结构：`/s/{username}/{page}` —— per-user workspace 概念
+- npm 包：`@slock-ai/daemon`
+- "Always on, always ready"：hibernate when idle, wake on new messages, full context restored, memory carries over automatically
+
+## 创建者：Richard Chien (余超)
 
 | 项 | 信息 |
 |---|---|
-| 身份 | **上海交通大学（SJTU）博士生** |
-| 方向 | VLM、LLM、Post-training、Benchmarking |
-| 代表工作 | LVLM-eHub, TinyLVLM-eHub, MMIU, ChartAssistant |
-| 合作圈 | 与 Ping Luo（罗平，HKU/上海 AI Lab）等 |
-| X | [@FanqingMengAI](https://x.com/FanqingMengAI) |
+| 英文名 | Richard Chien |
+| 中文名 | **余超** |
+| 别名 | RC, stdrc, istdrc |
+| GitHub | https://github.com/stdrc |
+| X | https://x.com/istdrc |
+| 个人站 | https://stdrc.cc |
+| LinkedIn | https://linkedin.com/in/stdrc |
+| 座右铭 | "I build ecosystems, not just software." |
 
-**学术圈出身的多模态 LLM 研究者**，slock.ai 是工程实验，非商业团队产品。
+### 完整履历
+
+| 时间 | 经历 |
+|---|---|
+| 2016–2020 | 开源 chatbot 生态 **CQHTTP → OneBot → NoneBot**（Python chatbot 框架，国内 QQ/IM bot 开发者圈知名）|
+| 2020–2023 | **SJTU IPADS** 硕士，做 microkernel OS 和 hypervisor |
+| 2022–2025 | **RisingWave Labs** core contributor，PostgreSQL 兼容的 streaming database (Rust) |
+| 2025–至今 | **Moonshot AI**，主导 **Kimi CLI**，做 agent infra (`kosong` LLM 抽象层、`kimi-agent-sdk`) |
+| 2026 春节起 | 个人项目 **slock.ai** |
+
+### 技术 DNA
+
+**他从 2016 年就是 chatbot/agent 框架作者**。slock.ai 是这条线的自然演化：
+- **NoneBot 时代** = chatbot 生态思维
+- **Kimi CLI 时代** = agent harness 思维
+- **slock.ai** = agent-human collaboration UX 思维
+
+**横跨 chatbot 历史 + agent harness + 协作介质三层，是 agent-native IM 这个 framing 最有资格的人之一。**
+
+## 自述
+
+来自 RC 的 X 推文：
+
+> "Hi, I'm RC. I previously built Kimi CLI at Moonshot AI. Now I'm building Slock, an agent-human collaboration platform for modern builders and teams."
+
+> "被 Slack 删除 workspace 的中国公司可以试试 Slock，我们正在定义的下一代生产力协作平台"
+
+(注意第二条用了"我们"——可能在拉团队，但目前无公开 team 信息)
 
 ## 融资 / 阶段
 
 - **融资**: 无任何 slock.ai 融资记录
-- **公司主体**: 未发现注册公司或团队页，看起来是个人项目
-- **阶段**: 早期 demo / soft launch
-- **Product Hunt / HN**: 未检索到发布或讨论
-- **GitHub**: 未发现 `slock-ai` / `slockai` 组织
+- **公司主体**: 无（footer "Botiverse" 来源不明，可能是个人 brand）
+- **阶段**: soft launch / 小范围测试
+- **Product Hunt / HN**: 未检索到发布
 
-## 与 Agent 生态的连接
+## 与 Agent 生态的关系
 
-slock.ai 命中了 Dongzhe 当前研究主线（agent 经济、agent 通信、多 agent 协作）的一个特定层级——**Agent 协作的承载介质（IM/UX 入口层）**。
+### Agent-Native IM 同赛道项目对比
 
-### Agent-Native IM 是一个被多方探索的赛道
+| 项目 | 团队 | 路线 | 作者背景 |
+|------|------|------|---------|
+| **slock.ai** | Richard Chien (个人/小团队) | Slack 风格 + 本地 daemon | **Moonshot Kimi CLI 主作者**，10 年 chatbot 生态 |
+| **HiClaw** ([alibaba/hiclaw](https://github.com/alibaba/hiclaw)) | 阿里 AgentScope | 开源 + Matrix 协议派 | 大厂 |
+| **RockClaw** ([gdd-rock/rockclaw](https://github.com/gdd-rock/rockclaw)) | rockclaw.ai | 社区派，250+ citizens | — |
 
-| 项目 | 团队 | 特点 |
-|------|------|------|
-| **slock.ai** | Fanqing Meng (个人) | 极轻量 vibe-coded prototype |
-| **HiClaw** ([alibaba/hiclaw](https://github.com/alibaba/hiclaw)) | 阿里 AgentScope | 开源 Collaborative Multi-Agent OS，**走 Matrix 协议** |
-| **RockClaw** ([gdd-rock/rockclaw](https://github.com/gdd-rock/rockclaw)) | rockclaw.ai | "First AI-Native Autonomous Community"，250+ citizens / 926 skills |
+**slock.ai 的差异化**：
+- 不像 HiClaw 那样押 Matrix 协议（更主流但更重）
+- 不像 RockClaw 那样做大社区（更野心但更分散）
+- 走 **local-first daemon + Slack UX** 路线，技术敏感度极高（典型 Kimi CLI 作者的思路）
 
-**三者都在做 "AI agents as first-class citizens" 这个 framing**，但深度差异巨大：
-- **slock.ai** = 个人 prototype，把 agent 塞进类 Slack/Discord 体验
-- **HiClaw** = 协议派，开源 + Matrix 标准
-- **RockClaw** = 社区派，规模更大
+## 在 Dongzhe Agent Economy 栈中的位置
 
-## 与 Dongzhe 方向的关联
-
-### 直接关联
-
-slock.ai 代表 **"agent 协作的承载介质"** 这一层，是 agent 经济栈中比 marketplace 更**上层的 UX 入口层**：
+slock.ai 命中的是 **"Agent 协作的承载介质"** —— 比 marketplace 更上层的 UX 入口层：
 
 ```
-经济结算层 (Agent Economy)
+经济结算层 (Agent Economy) ← Dongzhe 最关心
         ↓
-通信协议层 (MCP / A2A)
+通信协议层 (MCP / A2A) ← Dongzhe 已研究
         ↓
-协作介质层 (IM / 聊天 UX)  ← slock.ai 在这一层
+协作介质层 (IM / 聊天 UX) ← slock.ai 在这层
+        ↓
+本地执行层 (daemon) ← slock.ai 也覆盖这一层
         ↓
 个体 Agent 层
 ```
 
-### Knowledge Agent Network 的对照点
+**slock.ai 同时占了协作介质 + 本地执行两层** —— 这是它的工程野心。
 
-如果 KAN 长出 UX 层，最自然的形态可能就是 IM——**多个 Wiki Agent 在一个聊天室里协作回答用户的问题**。slock.ai 是这个形态的雏形参考。
+## 关键判断
 
-### Super-Individual 叙事的又一案例
+### 修正后的判断
 
-继 MiroFish（20 岁本科生 10 天 → $4M）之后，slock.ai 是另一个证据：
+之前框架："学术圈博士的 vibe coding 玩具"——**完全错误，需要降权**
 
-| 项目 | 作者 | 周期 | 工具 |
-|------|------|------|------|
-| MiroFish | 20 岁本科生 | 10 天 | vibe coding |
-| slock.ai | SJTU 博士生 | 7 天 | vibe coding（0 行手写）|
-| BENZEMA Wiki MCP Server | Dongzhe (with Claude) | 1 天 | vibe coding |
+实际情况：
+- **Moonshot Kimi CLI 主作者 + 10 年 chatbot 生态老兵的下一个项目**
+- 信号强度：**高**
+- 技术成熟度：**高**（不是 vibe code，是有 daemon、namespace、状态机的真产品）
 
-**模式正在普及：单人 + AI coding = 一个完整的产品 prototype，几天内完成**。
+### 与 Knowledge Agent Network 的对照
 
-## 用户评价
+如果 Dongzhe 的 KAN 长出 UX 层，slock.ai 是最直接的参考：
 
-- 没有任何独立第三方评测
-- 没有媒体报道
-- 没有 Product Hunt / HN 讨论
-- 除作者本人推文外，社交媒体无声响
+| Dongzhe KAN | slock.ai | 启示 |
+|---|---|---|
+| Wiki Agent (MCP server) | Agent in channel | KAN agent 可以以"团队成员"形式出现 |
+| 跨节点查询 | Atlas/Luna 跨频道协作 | 需要类似的 IM-style coordination |
+| 节点暴露为 endpoint | local daemon | 也许 KAN 节点也该走 local-first |
+| 知识 namespace | `/s/{user}/` | 命名空间概念可以借鉴 |
 
-→ pre-public-traction 阶段。
+## 修正记录
 
-## 结论
+**2026-04-07**：之前的研究错误地将作者归为 Fanqing Meng (SJTU 多模态 LLM 博士生)。这是错误归因。
 
-### 确定的事实
-✅ Fanqing Meng 个人 vibe-coded side project
-✅ Agent-native IM，agent = first-class citizens
-✅ 春节 7 天完成，0 手写代码
-✅ slogan: "Where humans and AI agents collaborate"
+正确作者是 **Richard Chien (余超 / @stdrc)**，前 Moonshot AI Kimi CLI 主作者，更早是 NoneBot 等 chatbot 框架作者。两人的共同点都跟 SJTU 有关（Fanqing 是在读博士；Richard 是 IPADS 已毕业硕士），可能是误判源头。
 
-### 不确定 / 缺失
-❓ 具体功能集（哪些 agent？支持哪些模型？是否有 MCP？群聊？）
-❓ 商业化意图、roadmap、是否开源
-❓ 用户量、技术栈、持久化方案
-
-### 价值判断
-
-**不要把它当严肃产品或竞品对待。** 应该当成：
-1. **概念演示**——验证了 "agent-native IM" 这个 framing 的可行性
-2. **Super-individual 叙事的又一案例**——证明个人 vibe code 已经能产出可访问的产品
-3. **Agent 经济栈中"协作介质层"的样本**——加入"agent-native IM" landscape 的 reference list
-
-**真正值得深挖的同主题对照组**：
-- **HiClaw**（阿里 AgentScope）——开源、走 Matrix 协议
-- **RockClaw**——社区导向、规模更大
+之前研究中关于"7 天 vibe code"的描述也需降权——可能只是早期 v0.1，现在的 slock.ai 是有 daemon、有 namespace、有完整产品架构的成熟项目。
 
 ## 关键 URL
 
 - **官网**: https://slock.ai/
-- **作者 X**: https://x.com/FanqingMengAI
-- **作者 Google Scholar**: https://scholar.google.com/citations?user=iUIC-JEAAAAJ
-- **HiClaw（对照）**: https://github.com/alibaba/hiclaw
-- **RockClaw（对照）**: https://github.com/gdd-rock/rockclaw
+- **作者 GitHub**: https://github.com/stdrc
+- **作者 X**: https://x.com/istdrc
+- **作者个人站**: https://stdrc.cc
+- **Kimi CLI**: https://github.com/MoonshotAI/kimi-cli
+- **关键推文**（自述）: https://x.com/istdrc/status/2040862482622026076
+- **HiClaw（同赛道对照）**: https://github.com/alibaba/hiclaw
+- **RockClaw（同赛道对照）**: https://github.com/gdd-rock/rockclaw
