@@ -122,3 +122,14 @@
 - 实际案例: Polymarket 交易 bot + 2,847 数字人模拟，338 笔盈利 $4,266
 - 与 Dongzhe 研究关联: Agent Economy 新品类、super-individual 叙事、社会模拟型 World Model
 - 产出归档至 raw/articles/mirofish-research.md
+
+## [2026-04-07] ingest | OASIS (CAMEL-AI) 深度研究
+- arXiv 2411.11581，82 引用 13 influential
+- 唯一公开 1M LLM agent + RecSys + 动态网络 + 多平台的开源框架
+- 5 大模块：Environment Server、RecSys (TwHIN-BERT)、Agent Module、Time Engine、Scalable Inferencer (vLLM)
+- 三个验证实验：信息传播复刻 Vosoughi 2018、群体极化 (RLHF 压平极化)、Reddit 从众 (LLM 比真人更顺从)
+- 关键发现：herd effect 只在大尺度涌现 — "为什么需要百万级"的硬证据
+- ⭐ 关键缺口：21+ action 全是社交语义，没有支付/定价/合约 — Agent Economy 必须扩 action 空间
+- 判断：OASIS 是 Social Sim as a Service 的最佳底座，但不是 Agent Economy 的底座
+- 真正合适位置：Agent Economy 的"需求侧 testbed"
+- 产出归档至 raw/articles/oasis-camel-ai-research.md
