@@ -180,3 +180,17 @@
 - 网络: follow Xuanwo 等 agent infra 同温层, follower 包含 skyzh
 - 6 个具体连接点到 Dongzhe 的 KAN/Agent Economy/AK Wiki/Agent Deck
 - 产出归档至 raw/articles/richard-chien-deep-profile.md
+
+## [2026-04-07] ingest | Richard Chien 完整生态深度代码评审
+- 5 个并行 subagent 看了 7 个项目源码 (~19,000 LOC)
+- kimi-cli (~25-35k LOC) + kosong (~4,200 LOC) + agent-vault (~1,100 LOC) + OneBot spec + kimchi + tldr-vscode + pink
+- 最大发现: OneBot (2020) 和 Kimi Wire (2026) 几乎同一份设计的两次实现
+- kimi-cli 7 个独有机制: D-Mail 物理时光机、Ralph loop、Steer、持久化 sub-agent、Wire external tool、dynamic injection、token 双轨计数
+- kosong "Empty Layer" 美学: 12 件故意不做的事，4 个公开 API
+- agent-vault 3 个最巧妙设计: bigram 词检测、split-join 替换、UNVAULTED SHA256 反向匹配
+- kimchi 真相: 0 commits, 纯占位 fork (behind upstream 91)
+- tldr-vscode 是 LLM Wiki Pattern 的现成蓝图: parser/renderer/diff 三层 + 双向行号映射
+- pink 是 Python 版 Ink，预测将成为 Kimi CLI 下一代 UI
+- 7 个具体可执行的 KAN 启示
+- 一份 RFC 草案: "Wire Protocol Extension: Knowledge Node Discovery and Cross-Node Query"
+- 产出归档至 raw/articles/richard-chien-code-review.md
