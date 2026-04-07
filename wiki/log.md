@@ -69,13 +69,13 @@
 - 核心洞察：三种定义（Agent 工具 / 物理理解 / 模拟逼真）互不兼容
 - 当前 benchmark 各测不同东西，都叫 "World Model"
 - 缺失方向：1+2 交叉（因理解物理而能 zero-shot 适应新环境的 Agent）
-- 产出归档至 raw/articles/world-model/world-model-definition-problem.md
+- 产出归档至 output/reports/world-model/world-model-definition-problem.md
 
 ## [2026-04-06] query | 车昊轩 World Model 创业构想分析
 - 三层架构: World Model (基模) + Agent Harness + World Engine
 - 对标: 目前无人做全栈，Minecraft 生态最接近
 - Dongzhe 交叉点: Agent Harness + Communication + Economy 填 Layer 2
-- 产出归档至 raw/articles/world-model/che-haoxuan-startup-analysis.md
+- 产出归档至 output/reports/world-model/che-haoxuan-startup-analysis.md
 
 ## [2026-04-06] query | LLM Wiki 产品机会分析
 - AK 说 "room for an incredible new product"
@@ -83,21 +83,21 @@
 - 评分 23/30（细化），核心差异: 搜索 vs 编译
 - Obsidian AI 插件赛道无人做 LLM-compiled wiki
 - 验证路径: vault demo → 社区反馈 → 最简插件 → 提交社区
-- 产出归档至 raw/articles/llm-wiki-product-opportunity.md
+- 产出归档至 output/reports/llm-wiki-product-opportunity.md
 
 ## [2026-04-07] query | Knowledge Agent Network — 从个人知识库到知识经济
 - 从 AK Wiki 插件发散到 Agent 互联：每个人的 wiki 是一个 Agent 节点
 - 四阶段演进：Obsidian 插件 → Wiki Agent API → Agent 网络 → Knowledge Economy
 - 评分：Phase 1 = 23/30, Phase 4 = 28/30
 - 与 Dongzhe 的 Agent Economy 研究完美对齐（补 AGNTCY 缺的 economic layer）
-- 产出归档至 raw/articles/knowledge-agent-network-idea.md
+- 产出归档至 output/reports/knowledge-agent-network-idea.md
 
 ## [2026-04-07] query | Knowledge Agent Network 网络设计
 - 冷启动方案: 从 3-5 人知识圈开始（非 C 端）
 - 网络拓扑: 主题路由（C 方案）最 Agent-native
 - 激励: 互惠 → 声誉 → 经济（分阶段）
 - 最小有用单元: 深度研究变成可被全网 Agent 调用的知识服务
-- 产出归档至 raw/articles/knowledge-agent-network-design.md
+- 产出归档至 output/reports/knowledge-agent-network-design.md
 
 ## [2026-04-07] build | Wiki MCP Server
 - 将知识库暴露为 MCP Server（5 个 tools）
@@ -121,7 +121,7 @@
 - 底座: CAMEL-AI 的 OASIS 框架，支持 1M agents
 - 实际案例: Polymarket 交易 bot + 2,847 数字人模拟，338 笔盈利 $4,266
 - 与 Dongzhe 研究关联: Agent Economy 新品类、super-individual 叙事、社会模拟型 World Model
-- 产出归档至 raw/articles/mirofish-research.md
+- 产出归档至 output/reports/mirofish-research.md
 
 ## [2026-04-07] ingest | OASIS (CAMEL-AI) 深度研究
 - arXiv 2411.11581，82 引用 13 influential
@@ -132,14 +132,14 @@
 - ⭐ 关键缺口：21+ action 全是社交语义，没有支付/定价/合约 — Agent Economy 必须扩 action 空间
 - 判断：OASIS 是 Social Sim as a Service 的最佳底座，但不是 Agent Economy 的底座
 - 真正合适位置：Agent Economy 的"需求侧 testbed"
-- 产出归档至 raw/articles/oasis-camel-ai-research.md
+- 产出归档至 output/reports/oasis-camel-ai-research.md
 
 ## [2026-04-07] query | OASIS 后续研究方向讨论
 - 跳过 CAMEL 母框架（Dongzhe 之前已看过）
 - 高价值: AgentTorch (8.4M agents 但 rule-based) + Stanford Smallville (奠基)
 - 中价值: AgentScope (阿里, 1M 但无 RecSys), SOTOPIA (1v1 negotiation), Validation 批评论文
 - 推荐节奏: Validation 批评(30 分钟) → Smallville(本周) → AgentTorch vs OASIS(下次)
-- 产出归档至 raw/articles/oasis-followup-discussion.md
+- 产出归档至 output/reports/oasis-followup-discussion.md
 
 ## [2026-04-07] ingest | slock.ai 深度研究
 - Agent-native IM, slogan: "Where humans and AI agents collaborate"
@@ -150,7 +150,7 @@
 - 同赛道对照: HiClaw (阿里, Matrix 协议) + RockClaw (社区导向, 250 citizens)
 - Super-individual 叙事第三个案例 (前两个: MiroFish, BENZEMA Wiki MCP)
 - 在 Agent Economy 栈中位置: 协作介质层 (IM/UX 入口层)
-- 产出归档至 raw/articles/richard-chien/slock-ai-research.md
+- 产出归档至 output/reports/richard-chien/slock-ai-research.md
 
 ## [2026-04-07] correction | slock.ai 作者归属修正
 - ❌ 之前错误: Fanqing Meng (SJTU 多模态 LLM 博士生)
@@ -159,7 +159,7 @@
 - 误判源: 两人都跟 SJTU 有关
 - 信号强度大幅上调: 不是学术 vibe code 玩具, 是十年 chatbot/agent 生态老兵的下一个项目
 - 工程野心: slock.ai 同时占协作介质层 + 本地 daemon 执行层
-- raw/articles/richard-chien/slock-ai-research.md 已全文重写
+- output/reports/richard-chien/slock-ai-research.md 已全文重写
 
 ## [2026-04-07] ingest | Richard Chien 完整 agent stack
 - 看了 stdrc GitHub 后发现：他不是在做单个产品，是在搭整个 agent stack
@@ -167,7 +167,7 @@
 - 完整 stack：agent-vault (356★, 2 月) + kimi-cli + kosong + pykaos + slock + hakimi + kimchi
 - ⭐ agent-vault 直接对应 KAN 的 secrets 层缺口（占位符模型可复用）
 - "I build ecosystems, not just software" 是字面意义
-- 产出归档至 raw/articles/richard-chien/stack.md
+- 产出归档至 output/reports/richard-chien/stack.md
 
 ## [2026-04-07] ingest | Richard Chien 完整人物档案
 - 双线深度研究: GitHub 38 repos + Twitter timeline 部分抓取
@@ -179,7 +179,7 @@
 - my-vibe-coding 元仓库 = AK LLM Wiki 的同构形态
 - 网络: follow Xuanwo 等 agent infra 同温层, follower 包含 skyzh
 - 6 个具体连接点到 Dongzhe 的 KAN/Agent Economy/AK Wiki/Agent Deck
-- 产出归档至 raw/articles/richard-chien/deep-profile.md
+- 产出归档至 output/reports/richard-chien/deep-profile.md
 
 ## [2026-04-07] ingest | Richard Chien 完整生态深度代码评审
 - 5 个并行 subagent 看了 7 个项目源码 (~19,000 LOC)
@@ -193,7 +193,7 @@
 - pink 是 Python 版 Ink，预测将成为 Kimi CLI 下一代 UI
 - 7 个具体可执行的 KAN 启示
 - 一份 RFC 草案: "Wire Protocol Extension: Knowledge Node Discovery and Cross-Node Query"
-- 产出归档至 raw/articles/richard-chien/code-review.md
+- 产出归档至 output/reports/richard-chien/code-review.md
 
 ## [2026-04-07] ingest | Claude Code 实际源码深度分析（自我修正）
 - 基于本地 cli.js v2.1.87 (12.9MB, 16,750 行) 一手分析 + 2026-03-31 sourcemap 泄露后的多个 RE 仓库
@@ -203,14 +203,14 @@
 - Claude Code 比 kimi-cli 更细: per-tool `isConcurrencySafe(input)` 谓词，能精确到 "3 read 并发 + 1 write 栅栏 + 后续 read 再并发"
 - Compaction 三档: micro / auto / reactive
 - Sub-agent: clean context recursion (vs kimi-cli 的持久化可 resume)
-- 产出归档至 raw/articles/claude-code-source-analysis.md
+- 产出归档至 output/reports/claude-code-source-analysis.md
 
 ## [2026-04-07] query | Agent Tool 并发模型完整讨论归档
 - 起源: 阅读 RC 评审中"Sync handle, async future"段落引出的连环讨论
 - 核心问题: agent 框架如何让 LLM streaming 和 tool execution 在时间上重叠
 - 5 部分讨论: 革命性原理 + 主流框架现状 + Claude Code 真相 + 之前判断修正 + KAN 启示
 - KAN 设计建议: per-node `isConcurrencySafe` 谓词 + 读并发 + 写栅栏 + Generator merge
-- 产出归档至 raw/articles/agent-tool-concurrency-discussion.md
+- 产出归档至 output/reports/agent-tool-concurrency-discussion.md
 
 ## [2026-04-03] ingest | Wiki 编译批次：LLM Wiki / KAN / Harness / Multi-Agent Sim / World Model
 - 编译来源: raw/articles/llm-wiki-pattern.md, llm-wiki-product-opportunity.md, knowledge-agent-network-{idea,design}.md, richard-chien-{deep-profile,code-review}.md, claude-code-source-analysis.md, agent-tool-concurrency-discussion.md, slock-ai-research.md, mirofish-research.md, oasis-camel-ai-research.md, world-model/{world-model-definition-problem,che-haoxuan-startup-analysis,latest-developments-2025Q4-2026Q1}.md
@@ -221,7 +221,7 @@
 - 更新 _summaries.md: 追加 15 个新 raw 文件的摘要条目
 - Wiki 状态: 28 concepts, 7 maps, 8 connections
 
-## [2026-04-07] refactor | RC 相关文件归入 raw/articles/richard-chien/
+## [2026-04-07] refactor | RC 相关文件归入 output/reports/richard-chien/
 - 移动 4 个文件到专用文件夹：
   - richard-chien-stack.md → richard-chien/stack.md
   - richard-chien-deep-profile.md → richard-chien/deep-profile.md

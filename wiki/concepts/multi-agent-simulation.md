@@ -33,9 +33,9 @@
 
 | 来源 | 上下文 |
 |------|------|
-| `raw/articles/oasis-camel-ai-research.md` | OASIS 完整研究：5 大架构模块、action space、3 个验证实验、与 8 个竞品对比表、对 Agent Economy 的启示 |
-| `raw/articles/mirofish-research.md` | MiroFish 完整研究：作者背景、5 阶段工作流、Polymarket 案例、与 Dongzhe 方向 4 点关联 |
-| `raw/articles/oasis-followup-discussion.md` | OASIS 后续讨论：补充缺口分析与 Dongzhe-fit 角度 |
+| `output/reports/oasis-camel-ai-research.md` | OASIS 完整研究：5 大架构模块、action space、3 个验证实验、与 8 个竞品对比表、对 Agent Economy 的启示 |
+| `output/reports/mirofish-research.md` | MiroFish 完整研究：作者背景、5 阶段工作流、Polymarket 案例、与 Dongzhe 方向 4 点关联 |
+| `output/reports/oasis-followup-discussion.md` | OASIS 后续讨论：补充缺口分析与 Dongzhe-fit 角度 |
 
 ## 关联概念
 

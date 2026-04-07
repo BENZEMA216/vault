@@ -25,8 +25,8 @@
 | 来源 | 上下文 |
 |------|------|
 | `raw/articles/llm-wiki-pattern.md` | Karpathy gist 全文摘要：三层、三操作、index/log 双索引、Memex 引用 |
-| `raw/articles/llm-wiki-product-opportunity.md` | 把 pattern 产品化为 Obsidian 插件的机会分析（评分 23/30）、与 Notion AI/NotebookLM/Smart Connections 的差异化 |
-| `raw/articles/knowledge-agent-network-idea.md` | 把 LLM Wiki 作为 KAN Phase 1 的前置 |
+| `output/reports/llm-wiki-product-opportunity.md` | 把 pattern 产品化为 Obsidian 插件的机会分析（评分 23/30）、与 Notion AI/NotebookLM/Smart Connections 的差异化 |
+| `output/reports/knowledge-agent-network-idea.md` | 把 LLM Wiki 作为 KAN Phase 1 的前置 |
 | `CLAUDE.md` (本 vault) | 完整的 schema 实现：raw/wiki/output 三目录、ingest/query/lint 三流程、log 格式 |
 | `wiki/_index.md` + `wiki/log.md` | pattern 的真实双索引 |
 

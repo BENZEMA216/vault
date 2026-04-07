@@ -19,6 +19,21 @@ wiki/    LLM 编译产物（LLM 拥有，人只读）
 output/  查询产出（可回流 wiki/）
 ```
 
+### 三者的严格分工（重要）
+
+| 层 | 内容类型 | 谁写 | 举例 |
+|---|---|---|---|
+| **raw/** | **外部素材**：别人写的文章、论文 PDF、GitHub repo 的 README、访谈原文、AK 原版 gist 等 | 外部 + 人手动放入 | `raw/papers/reasoning/DrZero.pdf`、`raw/articles/llm-wiki-pattern.md`（AK 原文） |
+| **wiki/** | **编译后的结构化知识**：概念文章、主题地图、跨主题关联 | LLM 从 raw/ 和 output/ 编译 | `wiki/concepts/agent-communication.md` |
+| **output/** | **对话/查询产出**：深度研究报告、讨论归档、对比分析、RFC 草案、Marp 幻灯片 | LLM 在一次 query 中生成 | `output/reports/richard-chien/code-review.md`、`output/reports/agent-tool-concurrency-discussion.md` |
+
+**判断标准**：
+- 如果内容是 "我从别处收进来的" → `raw/`
+- 如果内容是 "我问了 Claude，它研究/讨论出来的" → `output/`
+- 如果内容是 "从多篇素材/产出里提炼的核心概念，可以被反复引用" → `wiki/`
+
+**output/ → wiki/ 的回流**：当 output/ 里的产出被证明有长期价值（被其他文档引用、知识密度高），应该提炼成 `wiki/concepts/` 或 `wiki/connections/`，output 原文作为引用源保留。
+
 ## 目录结构
 
 ```
@@ -42,9 +57,12 @@ vault/
 │   ├── maps/                      # 主题地图（6 篇）
 │   └── connections/               # 跨主题关联发现（6 篇）
 │
-├── output/                        # Query 产出
-│   ├── reports/
-│   └── slides/                    # Marp 格式
+├── output/                        # Query 产出（对话产物）
+│   ├── reports/                   # 深度研究、讨论归档、对比分析
+│   │   ├── richard-chien/         # 人物/生态研究
+│   │   ├── world-model/           # 世界模型研究
+│   │   └── *.md                   # 顶层 query 产出
+│   └── slides/                    # Marp 幻灯片
 │
 ├── .claude/commands/              # Slash commands（/kb-ingest, /kb-query, etc.）
 ├── active_context.md              # 热记忆：当前优先级
@@ -67,8 +85,11 @@ vault/
 1. 读 `_index.md` 定位相关页面
 2. 读取相关 concepts/maps，按需回溯 raw/
 3. 合成答案（markdown / 对比表 / Marp 幻灯片 / matplotlib）
-4. **有价值的答案归档回 wiki/**（Query 结果不应消失在聊天记录里）
-5. Append 到 `log.md`：`## [YYYY-MM-DD] query | 问题摘要`
+4. **归档到 `output/reports/`**（Query 结果不应消失在聊天记录里）
+5. 如果产出价值高，可以从 output/ 提炼成 wiki/ 的 concept 或 connection
+6. 更新 `_summaries.md` 加入 output 新文件
+7. 更新 `_index.md` 在对应领域 section 加 output 引用
+8. Append 到 `log.md`：`## [YYYY-MM-DD] query | 问题摘要`
 
 ### Lint（健康检查）
 

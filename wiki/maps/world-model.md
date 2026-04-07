@@ -210,7 +210,7 @@
 |------|------|------|------|
 | Understanding World or Predicting Future? | 2024 | ~120 | B |
 
-> 详细论文信息（作者、会议、链接）见 [[raw/articles/world-model/paper-index]]
+> 详细论文信息（作者、会议、链接）见 [[output/reports/world-model/paper-index]]
 
 ---
 

@@ -34,9 +34,8 @@
 - [[connections/harness-to-kan]] — Agent Harness 设计模式 → KAN 的 8 条迁移建议
 - [[connections/llm-wiki-to-agent-network]] — LLM Wiki 范式 → KAN 四阶段演化路径
 
-### 数据源
+### 数据源 (raw/ — 外部素材)
 - `raw/articles/agent-communication/` — 协议研究、学术论文、产品格局（3 篇）+ 论文索引（30 篇）
-- `raw/articles/world-model/` — 深度研究、论文索引（39 篇）、产品格局
 - `raw/articles/memory-research/` — Agent 记忆方案对比
 - `raw/papers/agent-infrastructure/` — LLM-in-Sandbox、Tool Search Tool
 - `raw/papers/agent-memory/` — MemEvolve、Distilling Feedback 等 9 篇论文+PDF
@@ -46,15 +45,30 @@
 - `raw/articles/learning-notes/0620-anthropic-agent-cookbook.md` — Anthropic Agent Cookbook
 - `raw/articles/learning-notes/0707-12-factor-agent.md` — 12 Factor Agent
 - `raw/articles/learning-notes/0702-scaling-test-time-compute.md` — Scaling Test Time Compute
-- `raw/articles/richard-chien/stack.md` — RC 早期技术栈研究
-- `raw/articles/richard-chien/deep-profile.md` — RC 完整人物档案（38 repo + botiverse）
-- `raw/articles/richard-chien/code-review.md` — 7 个项目 ~19,000 LOC 源码级评审
-- `raw/articles/claude-code-source-analysis.md` — Claude Code v2.1.87 cli.js 一手分析
-- `raw/articles/agent-tool-concurrency-discussion.md` — Tool 并发模型三种路径完整讨论
-- `raw/articles/richard-chien/slock-ai-research.md` — slock.ai agent-native IM 深度研究
-- `raw/articles/mirofish-research.md` — MiroFish 多 agent 仿真产品化案例
-- `raw/articles/oasis-camel-ai-research.md` — OASIS 1M agents 社会模拟框架
-- `raw/articles/oasis-followup-discussion.md` — OASIS 后续讨论与 Dongzhe-fit 角度
+
+### 对话产出 (output/reports/ — query 与 discussion 归档)
+
+**World Model 研究（7 篇）**
+- `output/reports/world-model/paper-index.md` — 49 篇论文索引（含引用数、质量评级）
+- `output/reports/world-model/deep-research.md` — 五大技术路线 + LLM world model 辩论 + $80亿+ 产品格局
+- `output/reports/world-model/product-landscape.md` — 世界模型产品/创业格局
+- `output/reports/world-model/benchmarks-interactive-video.md` — 24 个 benchmark，9 类 metrics
+- `output/reports/world-model/world-model-definition-problem.md` — 三种定义的互斥 + 缺失 benchmark 分析
+- `output/reports/world-model/che-haoxuan-startup-analysis.md` — 车昊轩三层架构创业分析
+- `output/reports/world-model/latest-developments-2025Q4-2026Q1.md` — Sora 关闭/LeCun AMI/LeWM 等五大转折
+
+**Richard Chien 完整档案（4 篇）**
+- `output/reports/richard-chien/stack.md` — 早期技术栈 overview
+- `output/reports/richard-chien/deep-profile.md` — 38 repo + Twitter + 网络分析
+- `output/reports/richard-chien/code-review.md` — 7 个项目 ~19,000 LOC 源码级评审
+- `output/reports/richard-chien/slock-ai-research.md` — slock.ai agent-native IM 深度研究
+
+**其他深度研究**
+- `output/reports/claude-code-source-analysis.md` — Claude Code v2.1.87 cli.js 一手分析
+- `output/reports/agent-tool-concurrency-discussion.md` — Tool 并发模型三种路径完整讨论
+- `output/reports/mirofish-research.md` — MiroFish 多 agent 仿真产品化案例
+- `output/reports/oasis-camel-ai-research.md` — OASIS 1M agents 社会模拟框架
+- `output/reports/oasis-followup-discussion.md` — OASIS 后续研究方向讨论
 
 ---
 
@@ -68,11 +82,13 @@
 - [[connections/llm-wiki-to-agent-network]] — LLM Wiki → KAN 四阶段演化路径
 - [[connections/harness-to-kan]] — RC harness 设计模式 → KAN 工程实现
 
-### 数据源
+### 数据源 (raw/ — 外部素材)
 - `raw/articles/llm-wiki-pattern.md` — Karpathy gist 的完整文档
-- `raw/articles/llm-wiki-product-opportunity.md` — 产品化为 Obsidian 插件的机会分析（评分 23/30）
-- `raw/articles/knowledge-agent-network-idea.md` — KAN 完整愿景与四阶段演进
-- `raw/articles/knowledge-agent-network-design.md` — 网络生效机制：冷启动、激励、拓扑、Step 0-4 启动路径
+
+### 对话产出 (output/reports/ — query 与 discussion 归档)
+- `output/reports/llm-wiki-product-opportunity.md` — 产品化为 Obsidian 插件的机会分析（评分 23/30）
+- `output/reports/knowledge-agent-network-idea.md` — KAN 完整愿景与四阶段演进
+- `output/reports/knowledge-agent-network-design.md` — 网络生效机制：冷启动、激励、拓扑、Step 0-4 启动路径
 
 ---
 
@@ -138,7 +154,7 @@
 ### 数据源
 - `raw/articles/learning-notes/` — 40+ 篇飞书/外部同步的学习笔记
 - `raw/articles/blog/` — AI Agent 产品设计博客阅读清单
-- `raw/articles/设计原则.md` — StoryCode Studio CSS 设计 token
+- `raw/articles/即梦设计原则？.md` — StoryCode Studio CSS 设计 token
 - `raw/papers/visual-generation/` — VisPainter、PaperBanana
 - `raw/papers/generative-models/` — Generative Modeling via Drifting
 
@@ -151,5 +167,6 @@
 | 概念文章 | 28 |
 | 主题地图 | 7 |
 | 关联发现 | 8 |
-| Raw 数据源 | ~80 篇 |
-| 论文索引 | 69 篇（Agent Comm 30 + World Model 39） |
+| Raw 数据源 | 113 文件（论文 + 项目 + 学习笔记 + 外部素材） |
+| Output 对话产出 | 19 篇（深度研究 + discussion 归档） |
+| 论文索引 | ~79 篇（Agent Comm 30 + World Model 49） |

@@ -110,12 +110,12 @@
 
 ## 数据来源
 
-- `raw/articles/richard-chien/deep-profile.md` — RC 完整人物档案（38 个 repo + botiverse org + 工程哲学）
-- `raw/articles/richard-chien/code-review.md` — 7 个项目 ~19,000 LOC 源码级评审
-- `raw/articles/richard-chien/stack.md` — RC 技术栈早期研究
-- `raw/articles/claude-code-source-analysis.md` — Claude Code v2.1.87 cli.js 一手分析（修正了 streaming vs batched 的判断）
-- `raw/articles/agent-tool-concurrency-discussion.md` — 三种并发路径完整讨论
-- `raw/articles/richard-chien/slock-ai-research.md` — RC 的 botiverse 侧产品 slock.ai
+- `output/reports/richard-chien/deep-profile.md` — RC 完整人物档案（38 个 repo + botiverse org + 工程哲学）
+- `output/reports/richard-chien/code-review.md` — 7 个项目 ~19,000 LOC 源码级评审
+- `output/reports/richard-chien/stack.md` — RC 技术栈早期研究
+- `output/reports/claude-code-source-analysis.md` — Claude Code v2.1.87 cli.js 一手分析（修正了 streaming vs batched 的判断）
+- `output/reports/agent-tool-concurrency-discussion.md` — 三种并发路径完整讨论
+- `output/reports/richard-chien/slock-ai-research.md` — RC 的 botiverse 侧产品 slock.ai
 - `raw/articles/claude-code-research/` — Claude Code SP 详解、架构分析、Skills 分析等（6 篇）
 
 ## 开放问题

@@ -208,8 +208,8 @@ NVIDIA Cosmos (World Model)
 
 ## 来源文件
 
-- [[raw/articles/world-model/paper-index]] — 论文索引
-- [[raw/articles/world-model/deep-research]] — 深度研究报告
+- [[output/reports/world-model/paper-index]] — 论文索引
+- [[output/reports/world-model/deep-research]] — 深度研究报告
 
 ## 关联概念
 

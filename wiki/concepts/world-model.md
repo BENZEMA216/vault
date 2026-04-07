@@ -55,8 +55,8 @@ World Model 是 Agent 架构中**规划和预测**的核心组件：
 
 | 来源 | 上下文 |
 |------|--------|
-| [[raw/articles/world-model/paper-index]] | 39 篇论文完整索引，按引用量和领域分类 |
-| [[raw/articles/world-model/deep-research]] | 技术路线、LLM 辩论、JEPA Vision、产品格局、Scaling Laws 深度研究 |
+| [[output/reports/world-model/paper-index]] | 39 篇论文完整索引，按引用量和领域分类 |
+| [[output/reports/world-model/deep-research]] | 技术路线、LLM 辩论、JEPA Vision、产品格局、Scaling Laws 深度研究 |
 | [[maps/world-model]] | World Model 全景地图：技术演进、产品三层、投资格局 |
 | [[connections/world-model-to-agent]] | World Model 与 Agent 系统的交叉分析 |
 
