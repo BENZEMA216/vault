@@ -140,3 +140,14 @@
 - 中价值: AgentScope (阿里, 1M 但无 RecSys), SOTOPIA (1v1 negotiation), Validation 批评论文
 - 推荐节奏: Validation 批评(30 分钟) → Smallville(本周) → AgentTorch vs OASIS(下次)
 - 产出归档至 raw/articles/oasis-followup-discussion.md
+
+## [2026-04-07] ingest | slock.ai 深度研究
+- Agent-native IM, slogan: "Where humans and AI agents collaborate"
+- 作者: Fanqing Meng (SJTU 博士生, 多模态 LLM 研究者)
+- 工程: vibe coding 7 天, 0 手写代码, 春节 side project
+- ⚠️ 注意消歧: 不是 Slock.it (2015 以太坊), 不是 suckless slock, 不是 slock.date
+- 阶段: 个人 demo, 无融资无团队无路线图
+- 同赛道对照: HiClaw (阿里, Matrix 协议) + RockClaw (社区导向, 250 citizens)
+- Super-individual 叙事第三个案例 (前两个: MiroFish, BENZEMA Wiki MCP)
+- 在 Agent Economy 栈中位置: 协作介质层 (IM/UX 入口层)
+- 产出归档至 raw/articles/slock-ai-research.md
