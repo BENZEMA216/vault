@@ -160,3 +160,11 @@
 - 信号强度大幅上调: 不是学术 vibe code 玩具, 是十年 chatbot/agent 生态老兵的下一个项目
 - 工程野心: slock.ai 同时占协作介质层 + 本地 daemon 执行层
 - raw/articles/slock-ai-research.md 已全文重写
+
+## [2026-04-07] ingest | Richard Chien 完整 agent stack
+- 看了 stdrc GitHub 后发现：他不是在做单个产品，是在搭整个 agent stack
+- ⚠️ 第二次修正：Botiverse 是 RC 的真实 GitHub org（2023-05 创建），不是无关
+- 完整 stack：agent-vault (356★, 2 月) + kimi-cli + kosong + pykaos + slock + hakimi + kimchi
+- ⭐ agent-vault 直接对应 KAN 的 secrets 层缺口（占位符模型可复用）
+- "I build ecosystems, not just software" 是字面意义
+- 产出归档至 raw/articles/richard-chien-stack.md
