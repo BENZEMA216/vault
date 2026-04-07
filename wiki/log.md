@@ -113,3 +113,12 @@
 - 自动 git pull vault 每 10 分钟
 - 任何 MCP 客户端都可访问
 - Knowledge Agent Network — Node #1 正式上线
+
+## [2026-04-07] ingest | MiroFish 深度研究
+- 20 岁开发者 vibe coding 10 天 → 24 小时融资 3000 万 RMB（陈天桥）
+- GitHub 50.9k stars，曾压过 OpenAI/Google 登顶 Trending #1
+- 范式: Multi-Agent Simulation（数千 Agent 群体仿真预测）
+- 底座: CAMEL-AI 的 OASIS 框架，支持 1M agents
+- 实际案例: Polymarket 交易 bot + 2,847 数字人模拟，338 笔盈利 $4,266
+- 与 Dongzhe 研究关联: Agent Economy 新品类、super-individual 叙事、社会模拟型 World Model
+- 产出归档至 raw/articles/mirofish-research.md
