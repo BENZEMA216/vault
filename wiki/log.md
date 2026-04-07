@@ -168,3 +168,15 @@
 - ⭐ agent-vault 直接对应 KAN 的 secrets 层缺口（占位符模型可复用）
 - "I build ecosystems, not just software" 是字面意义
 - 产出归档至 raw/articles/richard-chien-stack.md
+
+## [2026-04-07] ingest | Richard Chien 完整人物档案
+- 双线深度研究: GitHub 38 repos + Twitter timeline 部分抓取
+- 关键洞察: "协议人 + Empty Layer 设计美学 + 双线工程(Moonshot + botiverse)"
+- 灵魂前史发现: qdp (2018, 把 QQ 消息当 transport protocol) = hakimi/slock 的远古祖先
+- 中文 chatbot 生态他主导 ~13,000 stars (CQHTTP+NoneBot+NoneBot2+OneBot)
+- RisingWave 时代: 375 commits, 写到 2025-07
+- "95% by Cursor" reading-list README = vibe coding 公开宣言
+- my-vibe-coding 元仓库 = AK LLM Wiki 的同构形态
+- 网络: follow Xuanwo 等 agent infra 同温层, follower 包含 skyzh
+- 6 个具体连接点到 Dongzhe 的 KAN/Agent Economy/AK Wiki/Agent Deck
+- 产出归档至 raw/articles/richard-chien-deep-profile.md
