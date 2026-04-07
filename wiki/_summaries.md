@@ -714,3 +714,82 @@
 > 10 篇核心文章的系统性深度研究：Anthropic/LangChain/Thoughtworks/HumanLayer/Inngest 对 Harness Engineering 的定义、Context 策略、安全自治、评估体系、运行时架构、实用模式
 - 关键概念：[[concepts/harness-engineering]], [[concepts/self-verification]], [[concepts/safe-autonomy]], [[concepts/agent-runtime]], [[concepts/spec-driven-development]], [[concepts/context-engineering]], [[concepts/progressive-disclosure]], [[concepts/sub-agent-architecture]]
 - 约 8000 字
+
+---
+
+## 新增 raw/articles/ 文件（2026-04-03 批次）
+
+### `raw/articles/llm-wiki-pattern.md`
+> Karpathy 的 LLM Wiki Pattern 完整文档：三层架构 (raw/wiki/schema)、三种操作 (ingest/query/lint)、index.md + log.md 双索引、Memex 渊源
+- 关键概念：[[concepts/llm-wiki-pattern]], [[concepts/knowledge-agent-network]]
+- 约 500 字
+
+### `raw/articles/llm-wiki-product-opportunity.md`
+> 把 LLM Wiki Pattern 产品化为 Obsidian 插件的机会分析：评分 23/30、与 Notion AI/NotebookLM/Smart Connections 差异化、Obsidian 600 万用户切入策略
+- 关键概念：[[concepts/llm-wiki-pattern]], [[concepts/knowledge-agent-network]]
+- 约 1200 字
+
+### `raw/articles/knowledge-agent-network-idea.md`
+> KAN 完整愿景：从个人 LLM Wiki → 互联 Wiki Agent 网络的四阶段演进、4 个使用场景、与 Dongzhe 已有 Agent Communication / Economy / AGNTCY 研究的对齐表、评分卡 Phase 4 28/30
+- 关键概念：[[concepts/knowledge-agent-network]], [[concepts/llm-wiki-pattern]], [[concepts/agent-communication]]
+- 约 2000 字
+
+### `raw/articles/knowledge-agent-network-design.md`
+> KAN 网络如何生效：冷启动从 3-5 人小圈子起步、激励四层级（互惠/声誉/经济/组合）、网络拓扑选主题路由、Step 0-4 启动路径
+- 关键概念：[[concepts/knowledge-agent-network]]
+- 约 800 字
+
+### `raw/articles/richard-chien-deep-profile.md`
+> RC (stdrc) 完整人物档案：38 个 GitHub repo + botiverse org + 工程哲学（协议人 + Empty Layer 美学 + 跨品牌中立）+ 双线工程（Moonshot in-house + botiverse solo）+ Hidden Gems 8 个 + 与 Dongzhe 工作的 6 个连接点
+- 关键概念：[[concepts/agent-native-im]], [[concepts/agent-tool-concurrency]], [[concepts/knowledge-agent-network]], [[maps/agent-harness-implementations]]
+- 约 5500 字
+
+### `raw/articles/richard-chien-code-review.md`
+> RC 7 个项目源码级评审：kimi-cli (~25-35k LOC) + kosong (~4.2k LOC) + agent-vault (~1.1k LOC) + OneBot 协议 + kimchi 占位 fork + tldr-vscode + pink。kimi-cli `_step()` 7 个核心机制（D-Mail 时光机、Ralph loop、Steer、持久化 sub-agent、Wire external tool、Dynamic injection、Token 双轨计数）。RC 是「协议人」+「Empty Layer 美学」的统一者
+- 关键概念：[[concepts/agent-tool-concurrency]], [[maps/agent-harness-implementations]], [[concepts/knowledge-agent-network]]
+- 约 8000 字
+
+### `raw/articles/claude-code-source-analysis.md`
+> Claude Code v2.1.87 cli.js bundle (12.9MB, 16,750 行) 一手分析。修正"post-stream parallel"判断：Claude Code 同时拥有 streaming-concurrent + post-stream batched 两条路径，由 feature gate `tengu_streaming_tool_execution2` 控制。`C68` streaming executor + per-tool `isConcurrencySafe(input)` 谓词 + `_N8` Promise.race generator merge + 三档 compaction (micro/auto/reactive)
+- 关键概念：[[concepts/agent-tool-concurrency]], [[maps/agent-harness-implementations]], [[concepts/sub-agent-architecture]]
+- 约 3500 字
+
+### `raw/articles/agent-tool-concurrency-discussion.md`
+> Agent Tool 并发模型完整讨论。三种路径：串行 (LangChain/AutoGen) / Post-stream batched / Streaming-concurrent。kosong 的 sync handle/async future 是核心原语，Claude Code 的 per-tool isConcurrencySafe 是更细的粒度。多 tool 场景节省 60%。对 KAN 的设计建议
+- 关键概念：[[concepts/agent-tool-concurrency]], [[concepts/knowledge-agent-network]]
+- 约 3500 字
+
+### `raw/articles/slock-ai-research.md`
+> slock.ai 完整研究（修正作者为 Richard Chien）：agent-native IM、Slack 风格 + 本地 daemon、3 大差异化 (Remember / One Conversation / Your Machines)、`@slock-ai/daemon` npm 包、与 HiClaw / RockClaw 同赛道对照、在 Dongzhe Agent Economy 栈中占协作介质 + 本地执行两层
+- 关键概念：[[concepts/agent-native-im]], [[concepts/agent-communication]]
+- 约 1800 字
+
+### `raw/articles/mirofish-research.md`
+> MiroFish 深度研究：20 岁 BUPT 大四作者郭航江 vibe coding 10 天 + 陈天桥孵化 + 24 小时内 ¥3000 万 ($4.1M) 融资 + 50.9k stars。基于 OASIS 框架，5 阶段工作流，Polymarket 案例验证 Agent 仿真 → 预测 → 交易回路。super-individual 叙事
+- 关键概念：[[concepts/multi-agent-simulation]], [[concepts/super-creators]]
+- 约 1800 字
+
+### `raw/articles/oasis-camel-ai-research.md`
+> OASIS 深度研究 (CAMEL-AI, arxiv 2411.11581, 82 引用)：1M agents + 内嵌 RecSys + 动态网络 + X/Reddit 多平台。3 个验证实验复刻真实社会现象 (Vosoughi 2018 / 群体极化 / Muchnik 2013)。最大缺口：21+ action 全是社交语义，没有支付/定价/合约——正是 Agent Economy 关心的核心
+- 关键概念：[[concepts/multi-agent-simulation]], [[concepts/agent-communication]]
+- 约 3000 字
+
+### `raw/articles/oasis-followup-discussion.md`
+> OASIS 后续讨论：OASIS 在 Agent Economy stack 中的正确位置 = 需求侧 testbed (合成消费者压测产品/定价/留存)，而非 economy 本身
+- 关键概念：[[concepts/multi-agent-simulation]], [[concepts/knowledge-agent-network]]
+- 约 600 字
+
+### `raw/articles/world-model/world-model-definition-problem.md`
+> World Model 三种定义的根本张力：(1) Agent 工具论 / (2) 认知科学论 (LeCun JEPA) / (3) 模拟器论 (Sora)。三个定义有三套互不兼容的 benchmark。Sora 之死证伪 3 ≠ 2。最有价值但缺失的 benchmark 是 1+2 交叉
+- 关键概念：[[concepts/world-model]]
+- 约 1300 字
+
+### `raw/articles/world-model/che-haoxuan-startup-analysis.md`
+> 车昊轩 (HKUST PhD, GameGen-X 一作 ICLR 2025, 华为香港) World Model 创业三层架构 (World Model + Agent Harness + World Engine) 全栈分析。竞品对比、数据护城河、Sora 教训、Dongzhe 的 Agent Economy 是最独特的交叉点
+- 关键概念：[[concepts/world-model]], [[concepts/harness-engineering]], [[concepts/knowledge-agent-network]]
+- 约 1500 字
+
+### `raw/articles/world-model/latest-developments-2025Q4-2026Q1.md`
+> World Model 2025.10-2026.04 最新进展：LeCun AMI Labs $1.03B 种子轮、LeWM 15M 参数 48x 加速、JEPA+AR 走向融合、Sora 关闭、Genie 3 Reliability Paradox、V-JEPA 2 zero-shot 跨实验室迁移、Densing Law (3.5 月翻倍)、Waymo 第一个 killer app
+- 关键概念：[[concepts/world-model]]
+- 约 1500 字

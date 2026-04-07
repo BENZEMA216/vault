@@ -211,3 +211,12 @@
 - 5 部分讨论: 革命性原理 + 主流框架现状 + Claude Code 真相 + 之前判断修正 + KAN 启示
 - KAN 设计建议: per-node `isConcurrencySafe` 谓词 + 读并发 + 写栅栏 + Generator merge
 - 产出归档至 raw/articles/agent-tool-concurrency-discussion.md
+
+## [2026-04-03] ingest | Wiki 编译批次：LLM Wiki / KAN / Harness / Multi-Agent Sim / World Model
+- 编译来源: raw/articles/llm-wiki-pattern.md, llm-wiki-product-opportunity.md, knowledge-agent-network-{idea,design}.md, richard-chien-{deep-profile,code-review}.md, claude-code-source-analysis.md, agent-tool-concurrency-discussion.md, slock-ai-research.md, mirofish-research.md, oasis-camel-ai-research.md, world-model/{world-model-definition-problem,che-haoxuan-startup-analysis,latest-developments-2025Q4-2026Q1}.md
+- 新增 concepts (5): llm-wiki-pattern, knowledge-agent-network, agent-tool-concurrency, agent-native-im, multi-agent-simulation
+- 新增 maps (1): agent-harness-implementations
+- 新增 connections (2): harness-to-kan, llm-wiki-to-agent-network
+- 更新 _index.md: 新增"LLM Wiki Pattern & 知识库基础设施"顶级 domain；Agent 基础设施 section 加 4 个新概念 + 1 个新 map + 2 个新 connection；数据源加 11 个新 raw 文件链接
+- 更新 _summaries.md: 追加 15 个新 raw 文件的摘要条目
+- Wiki 状态: 28 concepts, 7 maps, 8 connections

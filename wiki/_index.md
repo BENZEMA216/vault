@@ -16,16 +16,23 @@
 - [[concepts/agent-runtime]] — Agent Runtime：状态管理、持久化、重试的基础设施层
 - [[concepts/tool-routing]] — 工具路由：Agent 动态选择和调用工具的机制
 - [[concepts/world-model]] — 世界模型：五大技术路线 + $80亿+ 融资 + Agent 规划核心组件
+- [[concepts/knowledge-agent-network]] — KAN：从个人 LLM Wiki 演化到互联的知识 Agent 网络
+- [[concepts/agent-tool-concurrency]] — Agent Tool 并发：sync handle/async future + per-tool isConcurrencySafe
+- [[concepts/agent-native-im]] — Agent-Native IM：slock.ai / HiClaw / RockClaw 三种实现
+- [[concepts/multi-agent-simulation]] — Multi-Agent Simulation：OASIS 1M agents + MiroFish 产品化
 
 ### 地图
 - [[maps/agent-infrastructure]] — Agent 基础设施研究全景
 - [[maps/agent-communication]] — Agent 通信全景：协议栈、学术脉络、产品三层格局
 - [[maps/world-model]] — World Model 全景：技术路线、学术演进、投资格局
+- [[maps/agent-harness-implementations]] — Agent Harness 实现全景：kimi-cli / Claude Code / kosong / agent-vault 横向对照
 
 ### 关联
 - [[connections/communication-to-economy]] — Agent 通信 → Agent Economy：协议到经济基础设施
 - [[connections/world-model-to-agent]] — World Model → Agent：规划内核、训练环境、服务空白
 - [[connections/memory-to-context]] — 记忆系统 → 上下文工程
+- [[connections/harness-to-kan]] — Agent Harness 设计模式 → KAN 的 8 条迁移建议
+- [[connections/llm-wiki-to-agent-network]] — LLM Wiki 范式 → KAN 四阶段演化路径
 
 ### 数据源
 - `raw/articles/agent-communication/` — 协议研究、学术论文、产品格局（3 篇）+ 论文索引（30 篇）
@@ -39,6 +46,33 @@
 - `raw/articles/learning-notes/0620-anthropic-agent-cookbook.md` — Anthropic Agent Cookbook
 - `raw/articles/learning-notes/0707-12-factor-agent.md` — 12 Factor Agent
 - `raw/articles/learning-notes/0702-scaling-test-time-compute.md` — Scaling Test Time Compute
+- `raw/articles/richard-chien-stack.md` — RC 早期技术栈研究
+- `raw/articles/richard-chien-deep-profile.md` — RC 完整人物档案（38 repo + botiverse）
+- `raw/articles/richard-chien-code-review.md` — 7 个项目 ~19,000 LOC 源码级评审
+- `raw/articles/claude-code-source-analysis.md` — Claude Code v2.1.87 cli.js 一手分析
+- `raw/articles/agent-tool-concurrency-discussion.md` — Tool 并发模型三种路径完整讨论
+- `raw/articles/slock-ai-research.md` — slock.ai agent-native IM 深度研究
+- `raw/articles/mirofish-research.md` — MiroFish 多 agent 仿真产品化案例
+- `raw/articles/oasis-camel-ai-research.md` — OASIS 1M agents 社会模拟框架
+- `raw/articles/oasis-followup-discussion.md` — OASIS 后续讨论与 Dongzhe-fit 角度
+
+---
+
+## LLM Wiki Pattern & 知识库基础设施
+
+### 概念
+- [[concepts/llm-wiki-pattern]] — Karpathy 提出的个人知识库范式：raw → LLM 编译 → wiki
+- [[concepts/knowledge-agent-network]] — KAN：互联的 Wiki Agent 网络（详见 Agent 基础设施）
+
+### 关联
+- [[connections/llm-wiki-to-agent-network]] — LLM Wiki → KAN 四阶段演化路径
+- [[connections/harness-to-kan]] — RC harness 设计模式 → KAN 工程实现
+
+### 数据源
+- `raw/articles/llm-wiki-pattern.md` — Karpathy gist 的完整文档
+- `raw/articles/llm-wiki-product-opportunity.md` — 产品化为 Obsidian 插件的机会分析（评分 23/30）
+- `raw/articles/knowledge-agent-network-idea.md` — KAN 完整愿景与四阶段演进
+- `raw/articles/knowledge-agent-network-design.md` — 网络生效机制：冷启动、激励、拓扑、Step 0-4 启动路径
 
 ---
 
@@ -114,8 +148,8 @@
 
 | 类别 | 数量 |
 |------|------|
-| 概念文章 | 23 |
-| 主题地图 | 6 |
-| 关联发现 | 6 |
+| 概念文章 | 28 |
+| 主题地图 | 7 |
+| 关联发现 | 8 |
 | Raw 数据源 | ~80 篇 |
 | 论文索引 | 69 篇（Agent Comm 30 + World Model 39） |
