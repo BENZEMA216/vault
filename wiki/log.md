@@ -194,3 +194,20 @@
 - 7 个具体可执行的 KAN 启示
 - 一份 RFC 草案: "Wire Protocol Extension: Knowledge Node Discovery and Cross-Node Query"
 - 产出归档至 raw/articles/richard-chien-code-review.md
+
+## [2026-04-07] ingest | Claude Code 实际源码深度分析（自我修正）
+- 基于本地 cli.js v2.1.87 (12.9MB, 16,750 行) 一手分析 + 2026-03-31 sourcemap 泄露后的多个 RE 仓库
+- ⚠️ 修正了之前关于 "Claude Code 是 post-stream parallel" 的错误判断
+- 真相: Claude Code 同时拥有两条 tool execution 路径，由 Statsig feature gate `tengu_streaming_tool_execution2` 控制
+- Streaming 路径已在生产灰度，和 kimi-cli `_step()` 同构
+- Claude Code 比 kimi-cli 更细: per-tool `isConcurrencySafe(input)` 谓词，能精确到 "3 read 并发 + 1 write 栅栏 + 后续 read 再并发"
+- Compaction 三档: micro / auto / reactive
+- Sub-agent: clean context recursion (vs kimi-cli 的持久化可 resume)
+- 产出归档至 raw/articles/claude-code-source-analysis.md
+
+## [2026-04-07] query | Agent Tool 并发模型完整讨论归档
+- 起源: 阅读 RC 评审中"Sync handle, async future"段落引出的连环讨论
+- 核心问题: agent 框架如何让 LLM streaming 和 tool execution 在时间上重叠
+- 5 部分讨论: 革命性原理 + 主流框架现状 + Claude Code 真相 + 之前判断修正 + KAN 启示
+- KAN 设计建议: per-node `isConcurrencySafe` 谓词 + 读并发 + 写栅栏 + Generator merge
+- 产出归档至 raw/articles/agent-tool-concurrency-discussion.md
