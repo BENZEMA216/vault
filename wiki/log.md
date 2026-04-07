@@ -133,3 +133,10 @@
 - 判断：OASIS 是 Social Sim as a Service 的最佳底座，但不是 Agent Economy 的底座
 - 真正合适位置：Agent Economy 的"需求侧 testbed"
 - 产出归档至 raw/articles/oasis-camel-ai-research.md
+
+## [2026-04-07] query | OASIS 后续研究方向讨论
+- 跳过 CAMEL 母框架（Dongzhe 之前已看过）
+- 高价值: AgentTorch (8.4M agents 但 rule-based) + Stanford Smallville (奠基)
+- 中价值: AgentScope (阿里, 1M 但无 RecSys), SOTOPIA (1v1 negotiation), Validation 批评论文
+- 推荐节奏: Validation 批评(30 分钟) → Smallville(本周) → AgentTorch vs OASIS(下次)
+- 产出归档至 raw/articles/oasis-followup-discussion.md
