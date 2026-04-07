@@ -104,3 +104,12 @@
 - GitHub: BENZEMA216/wiki-mcp-server
 - 已注册到本地 ~/.mcp.json
 - Knowledge Agent Network 的第一个节点
+
+## [2026-04-07] deploy | Wiki MCP Server 上线 Railway
+- Live endpoint: https://benzema-wiki-mcp-production.up.railway.app/mcp
+- 改造为 HTTP/SSE 远程 MCP server (StreamableHTTP transport)
+- vault 改为 public（让 Railway 容器可以 git clone）
+- Tools: list_topics, read_page, search_knowledge, get_index, get_paper_index, get_log
+- 自动 git pull vault 每 10 分钟
+- 任何 MCP 客户端都可访问
+- Knowledge Agent Network — Node #1 正式上线
