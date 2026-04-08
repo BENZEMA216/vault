@@ -170,6 +170,17 @@
 - 首轮锚点: ¥500-1500 万 + 投后 ¥5000 万-¥1.2 亿
 - 产出归档至 output/reports/china-product-startup-first-funding.md
 
+## [2026-04-08] commit | Personal Knowledge Card — 产品 framing 翻转
+- 决策：放弃"为别人 build wiki"的死亡路径，commit "为自己的 AI build card,share 是副作用"
+- 终极态: Expert Network for AI Agents (= GLG × Stripe × Substack)
+- 冷启动路径: 内容创作者作为火种（已在公开输出 + 已用 AI + 自带 audience）
+- 第一批 5 人种子: BENZEMA + 后端兄弟 + 车昊轩 + 2 个朋友
+- 6 个 milestone 由果倒因: Today (1 card) → Month 6 (100 card) → Year 5 (Expert Network)
+- 关键认知: GitHub/Linktree/Cursor 都是 self-use 起步,share 是副作用
+- 已重写 wiki-mcp-server README + landing page,第一篇 launch posts 已起草
+- 产出归档至 output/reports/personal-knowledge-card-product-spec.md
+- 配套发布文案: output/reports/personal-knowledge-card-launch-posts.md
+
 ## [2026-04-07] ingest | Richard Chien 完整 agent stack
 - 看了 stdrc GitHub 后发现：他不是在做单个产品，是在搭整个 agent stack
 - ⚠️ 第二次修正：Botiverse 是 RC 的真实 GitHub org（2023-05 创建），不是无关
