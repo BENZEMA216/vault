@@ -181,6 +181,25 @@
 - 产出归档至 output/reports/personal-knowledge-card-product-spec.md
 - 配套发布文案: output/reports/personal-knowledge-card-launch-posts.md
 
+## [2026-04-08] query | Personal Knowledge Card 竞品研究 — 第一次自我修正
+- 触发: Dongzhe 质疑 "没有人做这件事" 的断言
+- 结果: 8 个产品在做 (sage-wiki, alanagoyal/mcp, mem0/OpenMemory, Letta, Pieces LTM-2, Khoj, Personal.ai, Claude Memory)
+- 真空地带: D3 (compiled wiki) + D5 (auto-ingest existing assets) 没人同时做到
+- 翻转: 从 self-use first 翻到 share-first ("让世界的 AI 引用你")
+- 产出: output/reports/personal-knowledge-card-competitive-research.md
+
+## [2026-04-08] query | Portable Identity Layer 竞品研究 — 第二次更深的修正
+- 触发: Dongzhe 提出 "wiki 加一个'我是谁'就补齐了" 的新洞察
+- 结果: 这个赛道在 H2-2025 已经爆发，比 Personal Knowledge Card 那一轮更红
+- 5/6 级别的竞品: Epitome (5.5/6, MIT/Docker/USDC pay-per-call), limitless-ai.dev (5/6, 5 维度逐字对应)
+- 协议层威胁: mem0 OpenMemory MCP (2025-05)
+- 厂商威胁: Anthropic Claude Import Memory (2026-03)
+- 中文生态: 国产模型 (豆包/Kimi/通义) 全部锁定厂商内 memory，无 portable
+- 还空着的 wedge: 中文生态 + Knowledge layer 联合 + Agent Economy 集成
+- 三个可选 path: Path A (fast follower 中文 wedge) / Path B (Agent Economy 入口) / Path C (Tooling for existing notes)
+- 必须的下一步: 在 build 之前先跑 Epitome
+- 产出: output/reports/portable-identity-competitive-research.md
+
 ## [2026-04-07] ingest | Richard Chien 完整 agent stack
 - 看了 stdrc GitHub 后发现：他不是在做单个产品，是在搭整个 agent stack
 - ⚠️ 第二次修正：Botiverse 是 RC 的真实 GitHub org（2023-05 创建），不是无关
